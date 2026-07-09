@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>The Coat — Case Study | Yuliia Dovha</title>
+<meta name="description" content="The Coat — UX/UI case study by Yuliia Dovha.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="wrap nav">
+  <a href="index.html" class="logo">YD</a>
+  <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="#" class="resume-link">Resume</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="wrap cs-hero">
+    <div class="title reveal">
+      <h1>The Coat</h1>
+      <p class="role">UX/UI Designer &bull; Case Study</p>
+    </div>
+    <div class="cs-shot reveal">
+      <div class="thumb-ph"><span>Hero mockup</span>replace with your Figma export</div>
+    </div>
+  </section>
+
+  <section class="cs-block reveal">
+    <h2><span class="num">01.</span>Overview</h2>
+    <p>E-commerce redesign for a Ukrainian fashion designer.</p>
+    <span class="note">Yuliia &mdash; this case study is a placeholder waiting for your real content: brief, research, screens and outcome. Send me the details (or screenshots, like we did for Marmix) and I'll build out the full write-up.</span>
+  </section>
+
+  <section class="wrap more-cases reveal">
+    <p class="h">Read more of my case studies</p>
+    <div class="more-grid">
+      <a href="marmix.html"><div class="mc-thumb">Marmix &mdash; case study</div><h4>Marmix</h4><p>Ready-mix concrete manufacturer &mdash; full audit, research and redesign.</p></a>
+      <a href="kalinamed.html"><div class="mc-thumb">KalinaMed &mdash; mockup</div><h4>KalinaMed</h4><p>Patient-focused personal brand for a doctor.</p></a>
+    </div>
+  </section>
+
+  <section class="wrap contact">
+    <p class="hi reveal">&#128075; Get in touch at</p>
+    <a class="mail reveal" href="mailto:julidovha05@gmail.com">julidovha05@gmail.com</a>
+    <div class="reveal"><a class="btn" href="mailto:julidovha05@gmail.com">Contact Me</a></div>
+  </section>
+</main>
+
+<footer class="wrap footer">
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="#" class="resume-link">Resume</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+  <div class="social"><a href="#" data-linkedin target="_blank" rel="noopener">LinkedIn</a></div>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  toggle && toggle.addEventListener('click', () => links.classList.toggle('open'));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

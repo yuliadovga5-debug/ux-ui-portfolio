@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Marmix — Case Study | Yuliia Dovha</title>
+<meta name="description" content="Marmix — redesign of a ready-mix concrete manufacturer's website. UX/UI case study by Yuliia Dovha: audit, research, information architecture, UI design and build.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="wrap nav">
+  <a href="index.html" class="logo">YD</a>
+  <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="#" class="resume-link">Resume</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="wrap cs-hero">
+    <div class="title reveal">
+      <h1>Marmix</h1>
+      <p class="role">UX/UI Designer &bull; Website Redesign &amp; Build</p>
+    </div>
+    <div class="cs-shot reveal" style="background:transparent;aspect-ratio:auto;overflow:visible;display:block;">
+      <img src="marmix-hero.jpg" alt="Marmix homepage shown on a MacBook" style="width:100%;height:auto;object-fit:contain;border-radius:0;">
+    </div>
+  </section>
+
+  <!-- META -->
+  <div class="wrap">
+    <div class="cs-meta reveal">
+      <div><div class="label">Role</div><div class="val">UX/UI Designer<br>(Solo, end to end)</div></div>
+      <div><div class="label">Scope</div><div class="val">Audit, Research, IA,<br>UX, UI, Build</div></div>
+      <div><div class="label">Tools</div><div class="val">Figma, WordPress,<br>Elementor</div></div>
+      <div><div class="label">Timeline</div><div class="val">Approx. 5&ndash;6 weeks</div></div>
+    </div>
+  </div>
+
+  <!-- BEFORE / AFTER -->
+  <div class="cs-band">
+    <div class="wrap">
+      <div class="ba-grid">
+        <div class="ba-item before reveal">
+          <div class="ba-label">Before &middot; the 2015 site</div>
+          <img class="shot-full" src="marmix-home-old.jpg" alt="Marmix original homepage before the redesign">
+        </div>
+        <div class="ba-item after reveal">
+          <div class="ba-label">After &middot; the redesign</div>
+          <img class="shot-full" src="marmix-home-new.jpg" alt="Marmix redesigned homepage">
+        </div>
+      </div>
+      <p class="cs-caption">The homepage before and after: from a dark, text-heavy 2015 layout to a clear, confident experience with a single message and an obvious call to action.</p>
+    </div>
+  </div>
+
+  <!-- 01 OVERVIEW -->
+  <section class="cs-block reveal">
+    <h2><span class="num">01.</span>Overview</h2>
+    <p>Marmix is a ready-mix concrete manufacturer based near Lublin. The company produces
+    concrete and building materials and delivers them within roughly a 40&nbsp;km radius, serving
+    two very different audiences: construction firms working to a schedule, and individual
+    investors pouring their first foundation.</p>
+    <p>Their website dated back to 2015 and no longer matched the scale or professionalism of the
+    business. It looked like a directory listing, not a supplier you would trust with a delivery
+    on a live building site. I took the project end to end &mdash; auditing the old site, running
+    the research, restructuring the information architecture, designing the UI in Figma, and
+    building the new site in WordPress and Elementor myself.</p>
+  </section>
+
+  <!-- 02 THE BRIEF / GOALS -->
+  <section class="cs-block reveal">
+    <h2><span class="num">02.</span>The brief</h2>
+    <p>The client didn't ask for &ldquo;a prettier website&rdquo;. They asked for a site that would win
+    more work. Translated into design goals, that meant four things:</p>
+    <div class="cs-cards">
+      <div class="cs-card">
+        <div class="k">Goal 01</div>
+        <h4>Build trust instantly</h4>
+        <p>Look as established and reliable as the company actually is, so a contractor feels safe
+        placing an order.</p>
+      </div>
+      <div class="cs-card">
+        <div class="k">Goal 02</div>
+        <h4>Make the offer legible</h4>
+        <p>Present the full range &mdash; concrete, materials, services &mdash; so a visitor understands
+        it in seconds, not paragraphs.</p>
+      </div>
+      <div class="cs-card">
+        <div class="k">Goal 03</div>
+        <h4>Turn visits into contact</h4>
+        <p>Give every page a clear next step: a call, an enquiry, or a calculation that starts the
+        conversation.</p>
+      </div>
+      <div class="cs-card">
+        <div class="k">Goal 04</div>
+        <h4>Stay self-manageable</h4>
+        <p>Ship on a stack the team can maintain themselves, without a developer on retainer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 RESEARCH -->
+  <section class="cs-block reveal">
+    <h2><span class="num">03.</span>Research</h2>
+    <p>Before touching the design, I wanted to understand three things: what was wrong with the old
+    site, how competitors present the same offer, and what the two buyer types actually need in
+    order to act.</p>
+
+    <h3>Heuristic audit of the old site</h3>
+    <p>I went through every page and logged the issues that were quietly working against the
+    business:</p>
+    <ul class="cs-list">
+      <li><strong>Dated, low-trust visual language.</strong> A dark, textured theme and cramped
+      layouts made a serious manufacturer look like a hobby project.</li>
+      <li><strong>Overloaded navigation.</strong> Eight competing top-level items (Home, Realizations,
+      Gallery, Production process, Calculator, Price list, Contact, EU funding) meant nothing stood out.</li>
+      <li><strong>Walls of text.</strong> The offer was buried in dense SEO copy and stacked tabs, with
+      weak hierarchy and no scannable structure.</li>
+      <li><strong>Broken and inconsistent imagery.</strong> The gallery literally showed broken image
+      placeholders next to small, mismatched photos.</li>
+      <li><strong>No clear call to action.</strong> No obvious path to call or order; the phone number
+      sat passively in a corner.</li>
+      <li><strong>A useful tool, hidden.</strong> The concrete calculator &mdash; genuinely valuable &mdash;
+      was a bare, unlabelled form that was easy to miss.</li>
+      <li><strong>Contact buried under legalese.</strong> The contact page led with GDPR and registry
+      copy before the actual phone number and form.</li>
+      <li><strong>No social proof, no answers.</strong> Nothing addressed the questions buyers ask before
+      choosing a supplier &mdash; delivery area, concrete classes, pump availability.</li>
+    </ul>
+
+    <div class="newshots reveal">
+      <figure>
+        <img class="shot-full" src="marmix-oferta-old.jpg" alt="Old Marmix offer page — long SEO text and stacked tabs">
+        <figcaption>Old offer page &mdash; the entire range hidden inside stacked tabs and paragraphs of SEO copy.</figcaption>
+      </figure>
+      <figure>
+        <img class="shot-full" src="marmix-galeria-old.jpg" alt="Old Marmix gallery showing broken image placeholders">
+        <figcaption>Old gallery &mdash; broken image placeholders sitting among inconsistent photos.</figcaption>
+      </figure>
+      <figure>
+        <img class="shot-full" src="marmix-kalkulator-old.jpg" alt="Old Marmix concrete calculator — bare form">
+        <figcaption>Old calculator &mdash; a bare form with no framing, easy to overlook.</figcaption>
+      </figure>
+      <figure>
+        <img class="shot-full" src="marmix-kontakt-old.jpg" alt="Old Marmix contact page buried under legal text">
+        <figcaption>Old contact page &mdash; the form pushed below long blocks of legal copy.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Competitive scan</h3>
+    <p>I looked at how other regional ready-mix and building-material suppliers present their offer.
+    The stronger ones did three things consistently: they led with one clear message and a phone
+    call, they stated their delivery area up front, and they made the concrete classes and services
+    easy to compare. The weaker ones repeated the old Marmix mistake &mdash; treating the homepage as a
+    document to read rather than a decision to make.</p>
+
+    <h3>Who is actually buying</h3>
+    <p>The single most useful insight was that Marmix serves two buyers with different needs, and the
+    old site spoke to neither clearly. I framed them as the lens for every layout decision:</p>
+    <div class="cs-cards">
+      <div class="cs-card">
+        <div class="k">Buyer A</div>
+        <h4>The contractor</h4>
+        <p>Ordering for a live site. Decides fast and needs:</p>
+        <ul>
+          <li>Delivery radius &amp; availability</li>
+          <li>Concrete classes (C8/10&ndash;C40/50)</li>
+          <li>Pump &amp; transport options</li>
+          <li>A direct number to call</li>
+        </ul>
+      </div>
+      <div class="cs-card">
+        <div class="k">Buyer B</div>
+        <h4>The individual investor</h4>
+        <p>Pouring a foundation, less experienced. Needs:</p>
+        <ul>
+          <li>Plain-language guidance</li>
+          <li>A calculator to estimate volume</li>
+          <li>Signals the company is trustworthy</li>
+          <li>An easy, low-pressure way to ask</li>
+        </ul>
+      </div>
+    </div>
+    <span class="note">Yuliia &mdash; if you ran any real user or client interviews, add a line or a quote here; first-hand research always strengthens a case study. Otherwise this framing (audit + competitive scan + buyer definition) is honest and defensible.</span>
+  </section>
+
+  <!-- 04 INFORMATION ARCHITECTURE -->
+  <section class="cs-block reveal">
+    <h2><span class="num">04.</span>Information architecture</h2>
+    <p>The biggest structural problem was the navigation. I collapsed eight scattered items into a
+    focused set of six and, crucially, grouped the entire offer under one clear
+    <strong>&ldquo;Oferta&rdquo;</strong> section with dedicated product subpages &mdash; so each product and
+    service gets its own space instead of fighting for room in the top menu.</p>
+    <div class="ia-grid">
+      <div class="ia-col before">
+        <div class="k">Before &middot; 8 items</div>
+        <ul>
+          <li>Home</li>
+          <li>Realizations</li>
+          <li>Gallery</li>
+          <li>Production process</li>
+          <li>Concrete calculator</li>
+          <li>Price list</li>
+          <li>Contact</li>
+          <li>EU funding</li>
+        </ul>
+      </div>
+      <div class="ia-col after">
+        <div class="k">After &middot; 6 items</div>
+        <ul>
+          <li>Home</li>
+          <li>About</li>
+          <li>Offer <span>&mdash; 6 product/service subpages</span></li>
+          <li>Realizations <span>&mdash; projects + gallery merged</span></li>
+          <li>Concrete calculator</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </div>
+    <p>&ldquo;Gallery&rdquo; and &ldquo;Realizations&rdquo; were merged into a single, stronger case-study
+    section. &ldquo;Production process&rdquo; and &ldquo;EU funding&rdquo; became supporting content
+    inside About and Realizations rather than competing tabs. The result is a menu that maps to how
+    people actually decide, not to how the company is organised internally.</p>
+  </section>
+
+  <!-- 05 DESIGN PROCESS -->
+  <section class="cs-block reveal">
+    <h2><span class="num">05.</span>Design &amp; build</h2>
+    <p>From the IA I moved into wireframes and then high-fidelity UI in Figma, designing mobile-first
+    and building the approved screens in WordPress and Elementor. A few decisions did most of the
+    work:</p>
+
+    <div class="decision">
+      <h4>One message, one action in the hero</h4>
+      <p>The homepage now opens with a single line &mdash; <em>&ldquo;Marmix &ndash; beton Lublin&rdquo;</em> &mdash;
+      over a real photo of the fleet, with one red <em>&ldquo;Zadzwoń teraz&rdquo;</em> button. The visitor's
+      job on that screen is obvious.</p>
+    </div>
+    <div class="decision">
+      <h4>The offer as a scannable grid</h4>
+      <p>The stacked tabs became a six-tile product grid (ready-mix, dry mix, other concretes,
+      precast, transport, excavator services), each linking to a focused subpage. A contractor can
+      scan the whole range in one glance.</p>
+    </div>
+    <div class="decision">
+      <h4>A three-step ordering path</h4>
+      <p>To remove the &ldquo;how do I even buy concrete?&rdquo; friction, I introduced a simple explainer:
+      <em>get in touch &rarr; choose the product and details &rarr; receive the delivery</em>.</p>
+    </div>
+    <div class="decision">
+      <h4>Trust, made visible</h4>
+      <p>Benefits (quality, punctuality, individual approach), certificates, EU-funding marks and an
+      FAQ now do the reassurance work the old site left to chance.</p>
+    </div>
+
+    <p>Here is how the key screens turned out:</p>
+
+    <div class="newshots reveal">
+      <figure>
+        <img class="shot-full" src="marmix-ofirmie-new.jpg" alt="New Marmix About page">
+        <figcaption>About &mdash; a benefit-led intro, a &ldquo;why choose us&rdquo; block and an FAQ carry the trust story.</figcaption>
+      </figure>
+      <figure>
+        <img class="shot-full" src="marmix-oferta-new.jpg" alt="New Marmix offer page with product grid">
+        <figcaption>Offer &mdash; a scannable product grid and a clear three-step ordering process.</figcaption>
+      </figure>
+      <figure>
+        <img class="shot-full" src="marmix-podstrona-new.jpg" alt="New Marmix product subpage — ready-mix concrete classes">
+        <figcaption>Product subpage &mdash; concrete classes C8/10&ndash;C40/50 explained by real use case.</figcaption>
+      </figure>
+      <figure>
+        <img class="shot-full" src="marmix-kalkulator-new.jpg" alt="New Marmix concrete calculator with two tools">
+        <figcaption>Calculator &mdash; two focused tools (slab/plate and footing), plain inputs, one clear action.</figcaption>
+      </figure>
+      <figure>
+        <img class="shot-full" src="marmix-realizacje-new.jpg" alt="New Marmix realizations page">
+        <figcaption>Realizations &mdash; the old text list becomes a project card grid plus a clean gallery.</figcaption>
+      </figure>
+      <figure>
+        <img class="shot-full" src="marmix-kontakt-new.jpg" alt="New Marmix contact page">
+        <figcaption>Contact &mdash; company details, map, a short form and an FAQ in one calm place.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 06 OUTCOME -->
+  <section class="cs-block reveal">
+    <h2><span class="num">06.</span>Outcome</h2>
+    <p>The new Marmix site is modern, trustworthy and built to convert. The offer is finally easy to
+    understand, every page leads toward a call or an enquiry, and the calculator gives buyers a
+    reason to engage before they even get in touch. Because it's built in WordPress, the team keeps
+    it up to date themselves.</p>
+  </section>
+
+  <div class="wrap">
+    <div class="stats reveal">
+      <div><div class="n">8&rarr;6</div><div class="l">navigation items, simplified</div></div>
+      <div><div class="n">6</div><div class="l">product &amp; service lines, organised</div></div>
+      <div><div class="n">3-step</div><div class="l">ordering process introduced</div></div>
+      <div><div class="n">2</div><div class="l">concrete calculators rebuilt</div></div>
+    </div>
+    <p class="cs-caption">The redesign at a glance &mdash; measured by design decisions, not vanity metrics.</p>
+  </div>
+
+  <section class="cs-block reveal">
+    <h3 style="text-align:center;">What I'd add next</h3>
+    <p>The honest next step is measurement. I'd instrument the calls and enquiries, watch the
+    calculator completion rate, and A/B test the hero CTA wording &mdash; then let real numbers, not
+    assumptions, guide the next iteration.</p>
+    <span class="note">Yuliia &mdash; if the client shares any real results (call volume, enquiries, a testimonial, launch date), drop them in here and I'll turn them into a proper results section with stat boxes.</span>
+  </section>
+
+  <!-- MORE CASE STUDIES -->
+  <section class="wrap more-cases reveal">
+    <p class="h">Read more of my case studies</p>
+    <div class="more-grid">
+      <a href="the-coat.html"><div class="mc-thumb">The Coat &mdash; mockup</div><h4>The coat</h4><p>E-commerce redesign for a Ukrainian fashion designer.</p></a>
+      <a href="biezynski.html"><div class="mc-thumb">Bie&#380;ynski &mdash; mockup</div><h4>Bie&#380;ynski</h4><p>A heritage family bakery reborn as a digital-first brand.</p></a>
+      <a href="kalinamed.html"><div class="mc-thumb">KalinaMed &mdash; mockup</div><h4>KalinaMed</h4><p>Patient-focused personal brand for a doctor.</p></a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="wrap contact">
+    <p class="hi reveal">&#128075; Get in touch at</p>
+    <a class="mail reveal" href="mailto:julidovha05@gmail.com">julidovha05@gmail.com</a>
+    <div class="reveal"><a class="btn" href="mailto:julidovha05@gmail.com">Contact Me</a></div>
+  </section>
+</main>
+
+<footer class="wrap footer">
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="#" class="resume-link">Resume</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+  <div class="social"><a href="#" data-linkedin target="_blank" rel="noopener">LinkedIn</a></div>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  toggle && toggle.addEventListener('click', () => links.classList.toggle('open'));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

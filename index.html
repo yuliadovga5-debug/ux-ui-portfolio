@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Yuliia Dovha — UX/UI Designer</title>
+<meta name="description" content="Yuliia Dovha — UX/UI Designer. I build high-converting digital experiences from market analysis to custom implementation.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="wrap nav">
+  <a href="index.html" class="logo">YD</a>
+  <button class="nav-toggle" aria-label="Menu">☰</button>
+  <nav class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#" class="resume-link">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="wrap hero">
+    <h1 class="reveal">Hi, I'm Yuliia.</h1>
+    <p class="reveal">I don't just design websites; I build high-converting digital experiences.
+    My "A to Z" approach ensures that every stage of development — from deep market
+    analysis to custom implementation — is laser-focused on boosting your conversion rates.</p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="wrap">
+    <div class="projects">
+
+      <a href="marmix.html" class="project reveal">
+        <div class="project-thumb">
+          <img src="marmix-hero.jpg" alt="Marmix homepage shown on a MacBook and phone">
+        </div>
+        <h3>Marmix</h3>
+        <p>Website redesign for a local concrete manufacturer, featuring a centered hero
+        layout and a streamlined B2C experience for a seamless ordering process of
+        construction materials.</p>
+        <span class="more">View case study →</span>
+      </a>
+
+      <a href="the-coat.html" class="project reveal">
+        <div class="project-thumb">
+          <div class="thumb-ph"><span>The Coat</span>replace with your Figma mockup</div>
+        </div>
+        <h3>The coat</h3>
+        <p>Website redesign for a Ukrainian fashion designer, featuring a new logo and a
+        streamlined e-commerce experience for the latest collection launch.</p>
+        <span class="more">View case study →</span>
+      </a>
+
+      <a href="biezynski.html" class="project reveal">
+        <div class="project-thumb">
+          <div class="thumb-ph"><span>Bieżynski</span>replace with your Figma mockup</div>
+        </div>
+        <h3>Bieżynski</h3>
+        <p>Modernizing a heritage family bakery into a digital-first brand. I developed a
+        visual strategy and custom product catalog designed to bridge the gap between
+        online browsing and physical store visits.</p>
+        <span class="more">View case study →</span>
+      </a>
+
+      <a href="kalinamed.html" class="project reveal">
+        <div class="project-thumb">
+          <div class="thumb-ph"><span>KalinaMed</span>replace with your Figma mockup</div>
+        </div>
+        <h3>KalinaMed</h3>
+        <p>Website for a doctor's personal brand: complete restructuring of site
+        architecture and intuitive UX design to enhance patient engagement.</p>
+        <span class="more">View case study →</span>
+      </a>
+
+    </div>
+
+    <!-- FIGMA: all projects -->
+    <div class="all-projects reveal">
+      <p>Want to see everything I've been working on?</p>
+      <a class="figma" href="#" target="_blank" rel="noopener" data-figma>See all projects on Figma →</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="wrap about">
+    <p class="eyebrow reveal">About</p>
+    <h2 class="reveal">A UX/UI designer who turns research into results.</h2>
+    <p class="reveal">I design digital products end to end — from understanding a business
+    and its customers, through wireframes and high-fidelity UI, to a clean handoff for
+    development. I care most about the moment strategy becomes something people actually
+    want to use.</p>
+    <p class="reveal">My work spans e-commerce, personal brands, and local businesses,
+    where clear structure and a confident visual voice make the difference between a
+    website that looks nice and one that converts.</p>
+    <div class="skills reveal">
+      <span>UX Research</span>
+      <span>Wireframing</span>
+      <span>UI Design</span>
+      <span>Figma</span>
+      <span>Prototyping</span>
+      <span>Design Systems</span>
+      <span>E-commerce</span>
+      <span>Responsive Design</span>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="wrap contact">
+    <p class="hi reveal">👋 Get in touch at</p>
+    <a class="mail reveal" href="mailto:julidovha05@gmail.com">julidovha05@gmail.com</a>
+    <div class="reveal"><a class="btn" href="mailto:julidovha05@gmail.com">Contact Me</a></div>
+  </section>
+</main>
+
+<footer class="wrap footer">
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="#about">About</a>
+    <a href="#" class="resume-link">Resume</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="social"><a href="#" data-linkedin target="_blank" rel="noopener">LinkedIn</a></div>
+</footer>
+
+<script>
+  // mobile menu
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  toggle && toggle.addEventListener('click', () => links.classList.toggle('open'));
+
+  // scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
