@@ -1,12 +1,11 @@
 /* ============================================================
-   MARMIX — side-by-side hero (scroll-on-hover) + full-bleed shots
-   Doklej na SAMYM KOncu pliku style.css.
+   MARMIX — side-by-side hero (scroll-on-hover) + contained shots
+   Doklej na SAMYM KOncu pliku style.css (albo zostaw jako osobny plik).
    ============================================================ */
 
-/* zapobiega poziomemu scrollbarowi przy obrazach 100vw */
 html, body { overflow-x: hidden; }
 
-/* ---------- Hero: uklad obok siebie (jak dotad) ---------- */
+/* ---------- Hero: uklad obok siebie ---------- */
 .cs-hero .title h1 { margin-bottom: 14px; }
 .cs-hero .scroll-hint {
   text-align: left; margin-top: 22px;
@@ -44,13 +43,34 @@ html, body { overflow-x: hidden; }
   transition: transform 9s linear;
 }
 
-/* ---------- Full-bleed image (od krawedzi do krawedzi) ---------- */
-.fullbleed { width: 100vw; margin-left: calc(50% - 50vw); }
-.fullbleed img { width: 100%; height: auto; display: block; }
+/* ---------- Zdjecia ZMIESZCZONE w 1440 (nie full-bleed) ---------- */
+.fullbleed { width: 100%; margin-left: 0; margin-right: 0; }
+.fullbleed img {
+  width: 100%; height: auto; display: block;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  box-shadow: 0 20px 50px -30px rgba(0,0,0,.28);
+}
 
-.showcase-block { margin: clamp(48px, 7vw, 88px) 0; }
-.showcase-block .band-label { margin-bottom: 22px; }
-.showcase-block .cs-caption { margin-top: 24px; }
+/* Nodpod-style: jasny pas na cala szerokosc, zdjecie wysrodkowane do 1440 */
+.showcase-block {
+  background: var(--card-2);
+  padding: clamp(40px, 6vw, 72px) 0;
+  margin: clamp(40px, 6vw, 72px) 0;
+}
+.showcase-block .fullbleed {
+  max-width: var(--maxw);
+  margin-left: auto; margin-right: auto;
+  padding-left: var(--pad); padding-right: var(--pad);
+}
+.showcase-block .cs-caption { margin-top: 22px; }
+
+/* View the live site */
+.live-site { text-align: center; max-width: 720px; margin: 0 auto; padding: 10px 0 20px; }
+.live-site h3 { font-weight: 600; font-size: 22px; margin-bottom: 14px; }
+.live-site p { color: #4a4a4a; font-size: 16px; font-weight: 300; line-height: 1.7; margin-bottom: 22px; }
+
+/* obrazy w blokach tekstowych: szerokosc kolumny czytania */
 .cs-block .fullbleed { margin: 26px 0; }
 
 /* section label (eyebrow z kreska) */
