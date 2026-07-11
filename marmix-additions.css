@@ -40,7 +40,7 @@ html, body { overflow-x: hidden; }
 .scroll-shot img { width: 100%; height: auto; display: block; transition: transform .6s ease; }
 .scroll-shot:hover img {
   transform: translateY(calc(-100% + var(--sh)));
-  transition: transform 9s linear;
+  transition: transform 16s linear;
 }
 
 /* ---------- Zdjecia ZMIESZCZONE w 1440 (nie full-bleed) ---------- */
@@ -94,3 +94,12 @@ html, body { overflow-x: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .scroll-shot:hover img { transform: none; transition: none; }
 }
+
+
+/* ---------- Bloki tekstu (przywrocone, gdyby zniknely ze style.css) ---------- */
+.cs-block { max-width: 820px; margin-left: auto; margin-right: auto; padding: 30px var(--pad); }
+.cs-block h2 { font-weight: 600; font-size: 26px; margin-bottom: 20px; letter-spacing: -0.3px; }
+.cs-block h2 .num { color: var(--muted-soft); font-weight: 600; margin-right: 12px; }
+.cs-block p { color: #4a4a4a; font-size: 16.5px; font-weight: 300; line-height: 1.7; margin-bottom: 16px; }
+.cs-block h3 { font-weight: 600; font-size: 18px; margin: 30px 0 12px; letter-spacing: -0.2px; }
+.note { display: block; color: #b06a00; background: #fff6e6; border: 1px dashed #f0c268; border-radius: 4px; padding: 11px 15px; font-size: 14px; font-weight: 400; margin-top: 14px; line-height: 1.55; }
