@@ -7,9 +7,9 @@
 <title>Marmix — Case Study | Yuliia Dovha</title>
 <meta name="description" content="Marmix — redesign of a ready-mix concrete manufacturer's website. UX/UI case study by Yuliia Dovha: audit, research, information architecture, UI design and build.">
 <link rel="stylesheet" href="style.css?v=3">
-<link rel="stylesheet" href="marmix-additions.css?v=7">
+<link rel="stylesheet" href="marmix-additions.css?v=8">
 </head>
-<body>
+<body class="marmix">
 
 <header class="wrap nav">
   <a href="index.html" class="logo">YD</a>
@@ -54,7 +54,7 @@
     <figure class="fullbleed">
       <img src="beton-after.jpg" alt="Marmix redesigned website — homepage and product page">
     </figure>
-    <p class="cs-caption">Pictured above: a quick glance of the homepage and a product page from Marmix's redesigned website.</p>
+    <p class="cs-caption">A quick glance of the homepage and a product page from Marmix's redesigned website.</p>
   </section>
 
   <!-- 01 OVERVIEW -->
@@ -63,41 +63,86 @@
     <p>Marmix is a ready-mix concrete manufacturer near Lublin, delivering concrete and building
     materials within roughly a 40&nbsp;km radius to two very different audiences: construction firms
     working to a schedule, and individual investors pouring their first foundation.</p>
-    <p>Their website dated back to 2015 and no longer matched the scale or professionalism of the
-    business, so Marmix asked for a site that would win more work &mdash; not just look nicer. I took
-    the project end to end: auditing the old site, running the research, restructuring the
-    information architecture, designing the UI in Figma, and building the new site in WordPress and
-    Elementor myself.</p>
+    <p>Their website dated back to 2015 and no longer matched the scale of the business. Marmix asked
+    for a site that would win more work &mdash; not just look nicer. I took the project end to end:
+    audit, research, information architecture, UI design in Figma, and the build itself in WordPress
+    and Elementor.</p>
   </section>
 
   <!-- 02 PROBLEM -->
   <section class="cs-block reveal">
-    <h2><span class="num">02.</span>Problem</h2>
-    <p>The old site quietly worked against the business. A dark, cramped 2015 theme made a serious
-    manufacturer look like a hobby project; eight competing menu items buried the offer under walls
-    of SEO text and stacked tabs; the gallery showed broken image placeholders; and the phone number
-    sat passively in a corner with no clear call to action.</p>
-    <p>The genuinely useful concrete calculator was hidden inside a bare, unlabelled form, and the
-    contact page led with GDPR copy instead of an easy way to get in touch. Nothing answered the
-    questions buyers actually ask &mdash; delivery area, concrete classes, pump availability &mdash; so
-    neither the contractor on a live site nor the first-time investor was served.</p>
+    <h2><span class="num">02.</span>The problem</h2>
+    <p>The old site quietly worked against the business. It made a serious manufacturer look small,
+    and buried the offer so buyers couldn't find what they came for.</p>
+    <ul class="issue-list">
+      <li><strong>Dated 2015 theme.</strong> Dark and cramped &mdash; it read like a hobby project, not a supplier you'd trust with a delivery.</li>
+      <li><strong>Eight-item menu.</strong> The offer was lost under walls of SEO text and stacked tabs.</li>
+      <li><strong>Broken gallery.</strong> Empty image placeholders sat where proof of work should be.</li>
+      <li><strong>Passive contact.</strong> The phone number sat in a corner with no clear call to act.</li>
+      <li><strong>Hidden calculator.</strong> A genuinely useful tool buried inside a bare, unlabelled form.</li>
+      <li><strong>No buyer answers.</strong> Nothing on delivery area, concrete classes or pump availability.</li>
+    </ul>
+  </section>
 
+  <!-- BEFORE & AFTER -->
+  <section class="ba-block reveal">
+    <div class="wrap">
+      <p class="band-label">Before &amp; after</p>
+      <h2 class="ba-title">The same pages, rethought</h2>
+      <p class="ba-lead">Four key pages, shown as the buyer first sees them &mdash; the 2015 site on the left, the redesign on the right.</p>
+
+      <div class="ba-grid">
+        <figure class="ba-pair">
+          <div class="ba-imgs">
+            <div class="ba-shot"><span class="ba-tag old">Before</span><img src="marmix-home-old.jpg" alt="Marmix homepage in 2015 — dark, cramped layout"></div>
+            <div class="ba-shot"><span class="ba-tag new">After</span><img src="marmix-home-new.jpg" alt="Marmix homepage redesigned — clear hero and single call to action"></div>
+          </div>
+          <figcaption class="ba-cap"><strong>Homepage.</strong> From a dark, busy landing page to one message and one clear &ldquo;call us&rdquo; action.</figcaption>
+        </figure>
+
+        <figure class="ba-pair">
+          <div class="ba-imgs">
+            <div class="ba-shot"><span class="ba-tag old">Before</span><img src="marmix-oferta-old.jpg" alt="Marmix offer page in 2015 — dense tabs and text"></div>
+            <div class="ba-shot"><span class="ba-tag new">After</span><img src="marmix-oferta-new.jpg" alt="Marmix offer page redesigned — scannable product grid"></div>
+          </div>
+          <figcaption class="ba-cap"><strong>Offer.</strong> Stacked tabs and SEO copy replaced by a scannable grid of products and services.</figcaption>
+        </figure>
+
+        <figure class="ba-pair">
+          <div class="ba-imgs">
+            <div class="ba-shot"><span class="ba-tag old">Before</span><img src="marmix-kalkulator-old.jpg" alt="Marmix concrete calculator in 2015 — bare unlabelled form"></div>
+            <div class="ba-shot"><span class="ba-tag new">After</span><img src="marmix-kalkulator-new.jpg" alt="Marmix concrete calculator redesigned — labelled and easy to use"></div>
+          </div>
+          <figcaption class="ba-cap"><strong>Concrete calculator.</strong> A hidden, unlabelled form turned into a clear tool that gives buyers a reason to engage.</figcaption>
+        </figure>
+
+        <figure class="ba-pair">
+          <div class="ba-imgs">
+            <div class="ba-shot"><span class="ba-tag old">Before</span><img src="marmix-kontakt-old.jpg" alt="Marmix contact page in 2015 — GDPR text first"></div>
+            <div class="ba-shot"><span class="ba-tag new">After</span><img src="marmix-kontakt-new.jpg" alt="Marmix contact page redesigned — map, details and a short form"></div>
+          </div>
+          <figcaption class="ba-cap"><strong>Contact.</strong> Legal copy no longer leads &mdash; the map, details and a short form come first.</figcaption>
+        </figure>
+      </div>
+    </div>
   </section>
 
   <!-- 03 DESIGN PROCESS -->
   <section class="cs-block reveal">
-    <h2><span class="num">03.</span>Design Process</h2>
-    <p>I began with a full heuristic audit and a competitive scan of regional suppliers, then reframed
-    the whole project around the two buyers &mdash; the contractor who decides fast, and the individual
-    investor who needs guidance and reassurance.</p>
-    <p>From there I restructured the information architecture, collapsing eight scattered menu items
-    into a focused six and grouping the entire range under one clear &ldquo;Oferta&rdquo; section with
-    dedicated product subpages. I moved from wireframes to high-fidelity UI in Figma, designing
-    mobile-first, and built the approved screens in WordPress and Elementor.</p>
-    <p>A few decisions did most of the work: a single message and one <em>&ldquo;Zadzwoń teraz&rdquo;</em>
-    action in the hero; the offer as a scannable six-tile product grid; a simple three-step ordering
-    path (get in touch &rarr; choose the product &rarr; receive the delivery); and trust made visible
-    through benefits, certificates, EU-funding marks and an FAQ.</p>
+    <h2><span class="num">03.</span>Design process</h2>
+    <p>I ran a heuristic audit and a competitive scan of regional suppliers, then reframed the whole
+    project around the two buyers &mdash; the contractor who decides fast, and the first-time investor
+    who needs guidance and reassurance.</p>
+    <ol class="steps">
+      <li><span class="s-k">Audit &amp; research</span> A heuristic review of the old site and a scan of competing suppliers in the region.</li>
+      <li><span class="s-k">Information architecture</span> Eight scattered menu items collapsed into a focused six, with the whole range grouped under one clear &ldquo;Oferta&rdquo;.</li>
+      <li><span class="s-k">UI in Figma</span> Wireframes to high-fidelity screens, designed mobile-first.</li>
+      <li><span class="s-k">Build</span> Approved screens built and shipped in WordPress and Elementor.</li>
+    </ol>
+    <p>A few decisions did most of the work: one message and a single <em>&ldquo;Zadzwoń teraz&rdquo;</em>
+    action in the hero; the offer as a scannable six-tile grid; a three-step ordering path (get in
+    touch &rarr; choose the product &rarr; receive the delivery); and trust made visible through
+    benefits, certificates, EU-funding marks and an FAQ.</p>
   </section>
 
   <!-- SHOWCASE 2: five screens -->
@@ -105,16 +150,36 @@
     <figure class="fullbleed">
       <img src="beton-overview.jpg" alt="Overview of the redesigned Marmix site — five key screens in one view">
     </figure>
-    <p class="cs-caption">Pictured above: views of the final approved designs. (Left to right: homepage, offer, product page, concrete calculator, contact.)</p>
+    <p class="cs-caption">The final approved designs. Left to right: homepage, offer, product page, concrete calculator, contact.</p>
+  </section>
+
+  <!-- MOBILE / RESPONSIVE -->
+  <section class="mobile-block reveal">
+    <div class="wrap mobile-inner">
+      <div class="mobile-copy">
+        <p class="band-label">Responsive</p>
+        <h2>Designed mobile-first</h2>
+        <p>Most people reach Marmix from a phone &mdash; a contractor checking the offer on-site, an
+        investor comparing suppliers on the sofa. Every screen was designed mobile-first, so the
+        hero, the offer grid and the concrete calculator all stay legible and easy to tap on a small
+        screen.</p>
+      </div>
+      <div class="mobile-mock">
+        <img src="phone.jpg" alt="Marmix site on two phones — the About page and the concrete calculator">
+      </div>
+    </div>
+    <div class="wrap">
+      <img class="mobile-fan" src="phone.png" alt="A range of Marmix mobile screens — homepage, offer, FAQ, contact and calculator">
+    </div>
   </section>
 
   <!-- 04 SOLUTION & RESULTS -->
   <section class="cs-block reveal">
-    <h2><span class="num">04.</span>Solution &amp; Results</h2>
+    <h2><span class="num">04.</span>Solution &amp; results</h2>
     <p>The result is a site that's modern, trustworthy and built to convert. The offer is finally
-    legible, every page leads toward a call or an enquiry, and the calculator gives buyers a reason to
-    engage before they even get in touch. Because it's built in WordPress, the team keeps it up to
-    date themselves.</p>
+    legible, every page leads toward a call or an enquiry, and the calculator gives buyers a reason
+    to engage before they get in touch. Because it's built in WordPress, the team keeps it up to date
+    themselves.</p>
   </section>
 
   <div class="wrap">
