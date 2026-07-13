@@ -131,3 +131,93 @@ html, body { overflow-x: hidden; }
   pointer-events: none;
   user-select: none;
 }
+
+
+/* ============================================================
+   v8 — 1296 hero, scannable text, before/after, mobile section
+   Dodane przez Yuliię (z pomocą). Wszystko poniżej dotyczy
+   tylko strony marmix.html (body.marmix).
+   ============================================================ */
+
+:root { --accent: #e2231a; }
+
+/* --- Sekcja z laptopem: 1296px + 80px gora/dol --- */
+.cs-hero { max-width: 1296px; padding: 80px var(--pad); }
+
+/* numery sekcji w czerwieni Marmixa */
+.cs-block h2 .num { color: var(--accent); }
+
+/* --- 02: lista problemow zamiast sciany tekstu --- */
+.cs-block .issue-list { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 13px; }
+.cs-block .issue-list li {
+  position: relative; padding-left: 24px;
+  color: #4a4a4a; font-size: 16px; font-weight: 300; line-height: 1.6;
+}
+.cs-block .issue-list li::before {
+  content: ""; position: absolute; left: 0; top: 9px;
+  width: 8px; height: 8px; border-radius: 50%; background: var(--accent);
+}
+.cs-block .issue-list strong { color: var(--ink); font-weight: 600; }
+
+/* --- 03: kroki procesu (to realna sekwencja, wiec numeracja ma sens) --- */
+.cs-block .steps { list-style: none; counter-reset: step; margin: 24px 0; padding: 0; display: grid; gap: 18px; }
+.cs-block .steps li {
+  position: relative; padding-left: 48px;
+  color: #4a4a4a; font-size: 16px; font-weight: 300; line-height: 1.6;
+}
+.cs-block .steps li::before {
+  counter-increment: step; content: counter(step, decimal-leading-zero);
+  position: absolute; left: 0; top: 1px;
+  font-size: 13px; font-weight: 600; letter-spacing: 1px; color: var(--accent);
+}
+.cs-block .steps .s-k { display: block; color: var(--ink); font-weight: 600; font-size: 16px; margin-bottom: 3px; }
+
+/* --- Before & after --- */
+.ba-block {
+  background: var(--card-2);
+  padding: clamp(48px, 7vw, 84px) 0;
+  margin: clamp(40px, 6vw, 72px) 0;
+}
+.ba-title { font-weight: 600; font-size: clamp(26px, 3.4vw, 34px); letter-spacing: -0.4px; margin: 14px 0 12px; }
+.ba-lead { color: #4a4a4a; font-size: 16.5px; font-weight: 300; line-height: 1.7; max-width: 60ch; margin-bottom: 6px; }
+.ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 34px 30px; margin-top: 34px; }
+.ba-imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.ba-shot {
+  position: relative; aspect-ratio: 4 / 3; overflow: hidden;
+  border-radius: 6px; border: 1px solid var(--line); background: var(--card);
+}
+.ba-shot img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+.ba-tag {
+  position: absolute; top: 10px; left: 10px; z-index: 1;
+  font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600;
+  padding: 4px 11px; border-radius: 100px; color: #fff;
+}
+.ba-tag.old { background: var(--accent); }
+.ba-tag.new { background: var(--ink); }
+.ba-cap { margin-top: 13px; font-size: 14px; color: var(--muted); font-weight: 300; line-height: 1.55; }
+.ba-cap strong { color: var(--ink); font-weight: 600; }
+
+/* --- Sekcja mobilna (responsive) --- */
+.mobile-block {
+  background: var(--card-2);
+  padding: clamp(48px, 7vw, 84px) 0;
+  margin: clamp(40px, 6vw, 72px) 0;
+}
+.mobile-inner {
+  display: grid; grid-template-columns: 1fr 1.05fr;
+  gap: clamp(30px, 6vw, 72px); align-items: center;
+}
+.mobile-copy .band-label { margin-bottom: 8px; }
+.mobile-copy h2 { font-weight: 600; font-size: clamp(26px, 3.4vw, 34px); letter-spacing: -0.4px; margin: 12px 0 16px; }
+.mobile-copy p { color: #4a4a4a; font-size: 16.5px; font-weight: 300; line-height: 1.7; max-width: 46ch; }
+.mobile-mock img { width: 100%; height: auto; display: block; border-radius: 10px; }
+.mobile-fan { width: 100%; height: auto; display: block; margin-top: clamp(30px, 5vw, 56px); border-radius: 8px; }
+
+@media (max-width: 900px) {
+  .ba-grid { grid-template-columns: 1fr; }
+  .mobile-inner { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .ba-imgs { grid-template-columns: 1fr; }
+  .ba-shot { aspect-ratio: 16 / 10; }
+}
