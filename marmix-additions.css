@@ -123,10 +123,13 @@ html, body { overflow-x: hidden; }
   border-radius: 4px;
   z-index: 1;
 }
-/* zdjecie w ekranie: powiekszone o 5px z kazdej strony (znika biala linia przy wycieciu) */
+/* zdjecie w ekranie: WYMUSZONE wypelnienie z zapasem po bokach.
+   !important bije ewentualny inline style="width:605px" na <img>. */
 .hero-browser.macbook .scroll-shot img {
-  width: calc(100% + 10px);
-  margin-left: -5px;
+  width: calc(100% + 16px) !important;
+  max-width: none !important;
+  margin-left: -8px !important;
+  height: auto;
 }
 .hero-browser.macbook .mb-frame {
   position: absolute; inset: 0;
