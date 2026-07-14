@@ -98,9 +98,11 @@ html, body { overflow-x: hidden; }
 }
 .hero-browser.macbook .scroll-shot{
   position: absolute;
-  left: 9.45%; top: 4.2%;          /* zmierzony otwór: 9.38% / 4.11% + drobny margines bezpieczeństwa */
-  width: 81.25%; height: 72.9%;    /* zmierzony: 81.44% x 73.07% — minimalnie węższe, żeby NIE wychodziło na ramkę */
-  border-radius: 3px; z-index: 1;
+  /* Otwór ekranu: L9.38 R90.82 T4.11 B77.18. Ramka (opaque): 8.35–91.70.
+     Zrzut zachodzi ~0.4% pod ramkę z każdej strony -> brak prześwitu i brak wystawania. */
+  left: 8.95%; top: 3.75%;
+  width: 82.35%; height: 73.75%;
+  z-index: 1;
 }
 .hero-browser.macbook .scroll-shot img{
   width: 100%; max-width: none; margin: 0; height: auto;
