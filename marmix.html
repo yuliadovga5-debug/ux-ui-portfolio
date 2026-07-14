@@ -7,7 +7,7 @@
 <title>Marmix — Case Study | Yuliia Dovha</title>
 <meta name="description" content="Marmix — redesign of a ready-mix concrete manufacturer's website. UX/UI case study by Yuliia Dovha: audit, research, information architecture, UI design and build.">
 <link rel="stylesheet" href="style.css?v=3">
-<link rel="stylesheet" href="marmix-additions.css?v=10">
+<link rel="stylesheet" href="marmix-additions.css?v=11">
 </head>
 <body class="marmix">
 
@@ -25,10 +25,11 @@
 <main>
 
   <!-- HERO -->
-  <section class="wrap cs-hero reveal">
+  <section class="wrap cs-hero" id="cs-hero">
     <div class="title">
-      <h1>Marmix</h1>
-      <p class="role">UX/UI Designer &bull; Website Redesign &amp; Build</p>
+      <span class="hero-kicker">Live client project &middot; Ready-mix concrete, Lublin</span>
+      <h1 class="hero-h1"><span>Marmix</span></h1>
+      <p class="role">UX/UI Designer &mdash; Website redesign &amp; build</p>
       <p class="scroll-hint">Hover the preview to scroll the full homepage &rarr;</p>
     </div>
     <div class="hero-browser macbook">
@@ -59,21 +60,25 @@
 
   <!-- 01 OVERVIEW -->
   <section class="cs-block reveal">
-    <div class="cs-card">
-      <h2><span class="num">01</span>Overview</h2>
-      <p>Marmix is a ready-mix concrete manufacturer near Lublin, delivering concrete and building
-      materials within roughly a 40&nbsp;km radius to two very different audiences: construction firms
-      working to a schedule, and individual investors pouring their first foundation.</p>
-      <p>Their website dated back to 2015 and no longer matched the scale of the business. Marmix asked
-      for a site that would win more work &mdash; not just look nicer. I took the project end to end:
-      audit, research, information architecture, UI design in Figma, and the build itself in WordPress
-      and Elementor.</p>
-    </div>
+    <header class="sec-head">
+      <span class="eyebrow idx">01</span>
+      <h2 class="sec-title">Overview</h2>
+    </header>
+    <p>Marmix is a ready-mix concrete manufacturer near Lublin, delivering concrete and building
+    materials within roughly a 40&nbsp;km radius to two very different audiences: construction firms
+    working to a schedule, and individual investors pouring their first foundation.</p>
+    <p>Their website dated back to 2015 and no longer matched the scale of the business. Marmix asked
+    for a site that would win more work &mdash; not just look nicer. I took the project end to end:
+    audit, research, information architecture, UI design in Figma, and the build itself in WordPress
+    and Elementor.</p>
   </section>
 
   <!-- 02 PROBLEM -->
   <section class="cs-block reveal">
-    <h2><span class="num">02</span>The problem</h2>
+    <header class="sec-head">
+      <span class="eyebrow idx">02</span>
+      <h2 class="sec-title">The problem</h2>
+    </header>
     <p>The old site quietly worked against the business. It made a serious manufacturer look small,
     and buried the offer so buyers couldn't find what they came for.</p>
     <ul class="issue-list">
@@ -89,9 +94,11 @@
   <!-- BEFORE & AFTER -->
   <section class="ba-block reveal">
     <div class="wrap">
-      <p class="band-label">Before &amp; after</p>
-      <h2 class="ba-title">The same pages, rethought</h2>
-      <p class="ba-lead">Four key pages, shown as the buyer first sees them &mdash; the 2015 site on the left, the redesign on the right.</p>
+      <header class="sec-head">
+        <span class="eyebrow">Before &amp; after</span>
+        <h2 class="sec-title">The same pages, rethought</h2>
+        <p class="sec-lead">Four key pages, shown as the buyer first sees them &mdash; the 2015 site on the left, the redesign on the right.</p>
+      </header>
 
       <div class="ba-grid">
         <figure class="ba-pair">
@@ -131,9 +138,11 @@
 
   <!-- WHO IT'S FOR -->
   <section class="cs-block reveal">
-    <p class="band-label">Who it's for</p>
-    <h2 class="art-title">Two very different buyers</h2>
-    <p class="art-lead">Every decision traced back to one of these two people. They arrive with different questions, so the site had to serve both without slowing either down.</p>
+    <header class="sec-head">
+      <span class="eyebrow">Who it's for</span>
+      <h2 class="sec-title">Two very different buyers</h2>
+      <p class="sec-lead">Every decision traced back to one of these two people. They arrive with different questions, so the site had to serve both without slowing either down.</p>
+    </header>
     <div class="persona-grid">
       <div class="persona">
         <span class="persona-tag">Buyer 01</span>
@@ -160,7 +169,10 @@
 
   <!-- 03 DESIGN PROCESS -->
   <section class="cs-block reveal">
-    <h2><span class="num">03</span>Design process</h2>
+    <header class="sec-head">
+      <span class="eyebrow idx">03</span>
+      <h2 class="sec-title">Design process</h2>
+    </header>
     <p>I ran a heuristic audit and a competitive scan of regional suppliers, then reframed the whole
     project around the two buyers &mdash; the contractor who decides fast, and the first-time investor
     who needs guidance and reassurance.</p>
@@ -176,10 +188,20 @@
     benefits, certificates, EU-funding marks and an FAQ.</p>
   </section>
 
+  <!-- SHOWCASE 2: five screens -->
+  <section class="showcase-block reveal">
+    <figure class="fullbleed">
+      <img src="beton-overview.jpg" alt="Overview of the redesigned Marmix site — five key screens in one view">
+    </figure>
+    <p class="cs-caption">The final approved designs. Left to right: homepage, offer, product page, concrete calculator, contact.</p>
+  </section>
+
   <!-- KEY DECISIONS, VISUALISED -->
   <section class="cs-block reveal">
-    <p class="band-label">Key decisions, visualised</p>
-    <h2 class="art-title">From scattered to structured</h2>
+    <header class="sec-head">
+      <span class="eyebrow">Key decisions, visualised</span>
+      <h2 class="sec-title">From scattered to structured</h2>
+    </header>
 
     <div class="artifact">
       <span class="artifact-h">Information architecture &mdash; 8 items down to 6</span>
@@ -197,7 +219,7 @@
             <li>Kontakt</li>
           </ul>
         </div>
-        <div class="ia-arrow">&rarr;</div>
+        <div class="ia-arrow" aria-hidden="true">&rarr;</div>
         <div class="ia-col">
           <span class="ia-k">After &mdash; 6 items</span>
           <ul class="ia-list new">
@@ -220,13 +242,13 @@
           <h4>Get in touch</h4>
           <p>Call or send a short enquiry from any page.</p>
         </div>
-        <div class="flow-sep">&rarr;</div>
+        <div class="flow-sep" aria-hidden="true">&rarr;</div>
         <div class="flow-step">
           <span class="fs-n">2</span>
           <h4>Choose the product</h4>
           <p>Pick the concrete class or service from a clear offer.</p>
         </div>
-        <div class="flow-sep">&rarr;</div>
+        <div class="flow-sep" aria-hidden="true">&rarr;</div>
         <div class="flow-step">
           <span class="fs-n">3</span>
           <h4>Receive delivery</h4>
@@ -236,51 +258,41 @@
     </div>
   </section>
 
-  <!-- SHOWCASE 2: five screens -->
-  <section class="showcase-block reveal">
-    <figure class="fullbleed">
-      <img src="beton-overview.jpg" alt="Overview of the redesigned Marmix site — five key screens in one view">
-    </figure>
-    <p class="cs-caption">The final approved designs. Left to right: homepage, offer, product page, concrete calculator, contact.</p>
-  </section>
-
   <!-- MOBILE / RESPONSIVE -->
   <section class="mobile-block reveal">
     <div class="wrap mobile-inner">
       <div class="mobile-copy">
-        <p class="band-label">Responsive</p>
-        <h2>Designed mobile-first</h2>
+        <span class="eyebrow">Responsive</span>
+        <h2 class="sec-title">Designed mobile-first</h2>
         <p>Most people reach Marmix from a phone &mdash; a contractor checking the offer on-site, an
         investor comparing suppliers on the sofa. Every screen was designed mobile-first, so the
         hero, the offer grid and the concrete calculator all stay legible and easy to tap on a small
         screen.</p>
       </div>
       <div class="mobile-mock">
-        <img src="phone.jpg" alt="Marmix site on two phones — the About page and the concrete calculator">
+        <img class="mobile-phones" src="phone-cut.png" alt="Marmix site on two phones — the About page and the concrete calculator">
       </div>
-    </div>
-    <div class="wrap">
-      <img class="mobile-fan" src="phone.png" alt="A range of Marmix mobile screens — homepage, offer, FAQ, contact and calculator">
     </div>
   </section>
 
   <!-- 04 SOLUTION & RESULTS -->
   <section class="cs-block reveal">
-    <div class="cs-card">
-      <h2><span class="num">04</span>Solution &amp; results</h2>
-      <p>The result is a site that's modern, trustworthy and built to convert. The offer is finally
-      legible, every page leads toward a call or an enquiry, and the calculator gives buyers a reason
-      to engage before they get in touch. Because it's built in WordPress, the team keeps it up to date
-      themselves.</p>
-    </div>
+    <header class="sec-head">
+      <span class="eyebrow idx">04</span>
+      <h2 class="sec-title">Solution &amp; results</h2>
+    </header>
+    <p>The result is a site that's modern, trustworthy and built to convert. The offer is finally
+    legible, every page leads toward a call or an enquiry, and the calculator gives buyers a reason
+    to engage before they get in touch. Because it's built in WordPress, the team keeps it up to date
+    themselves.</p>
   </section>
 
   <div class="wrap">
     <div class="stats reveal">
-      <div><div class="n">8&rarr;6</div><div class="l">navigation items, simplified</div></div>
-      <div><div class="n">6</div><div class="l">product &amp; service lines, organised</div></div>
-      <div><div class="n">3&#8209;step</div><div class="l">ordering process introduced</div></div>
-      <div><div class="n">2</div><div class="l">concrete calculators rebuilt</div></div>
+      <div class="stat"><div class="stat-n">8<span class="op">&rarr;</span>6</div><div class="stat-l">navigation items simplified</div></div>
+      <div class="stat"><div class="stat-n">6</div><div class="stat-l">product &amp; service lines organised</div></div>
+      <div class="stat"><div class="stat-n">3<span class="op">-step</span></div><div class="stat-l">ordering process introduced</div></div>
+      <div class="stat"><div class="stat-n">2</div><div class="stat-l">concrete calculators rebuilt</div></div>
     </div>
     <p class="cs-caption">The redesign at a glance &mdash; measured by design decisions, not vanity metrics.</p>
   </div>
@@ -297,9 +309,18 @@
   <section class="wrap more-cases reveal">
     <p class="h">Read more of my case studies</p>
     <div class="more-grid">
-      <a href="the-coat.html"><div class="mc-thumb">The Coat &mdash; mockup</div><h4>The coat</h4><p>E-commerce redesign for a Ukrainian fashion designer.</p></a>
-      <a href="biezynski.html"><div class="mc-thumb">Bie&#380;ynski &mdash; mockup</div><h4>Bie&#380;ynski</h4><p>A heritage family bakery reborn as a digital-first brand.</p></a>
-      <a href="kalinamed.html"><div class="mc-thumb">KalinaMed &mdash; mockup</div><h4>KalinaMed</h4><p>Patient-focused personal brand for a doctor.</p></a>
+      <a class="mc" href="the-coat.html">
+        <div class="mc-thumb"><span class="mc-mono">TC</span><span class="mc-go">Read case &rarr;</span></div>
+        <h4>The coat</h4><p>E-commerce redesign for a Ukrainian fashion designer.</p>
+      </a>
+      <a class="mc" href="biezynski.html">
+        <div class="mc-thumb"><span class="mc-mono">Bi</span><span class="mc-go">Read case &rarr;</span></div>
+        <h4>Bie&#380;ynski</h4><p>A heritage family bakery reborn as a digital-first brand.</p>
+      </a>
+      <a class="mc" href="kalinamed.html">
+        <div class="mc-thumb"><span class="mc-mono">Km</span><span class="mc-go">Read case &rarr;</span></div>
+        <h4>KalinaMed</h4><p>Patient-focused personal brand for a doctor.</p>
+      </a>
     </div>
   </section>
 
@@ -329,6 +350,17 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.08 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Measure the laptop screen window so the hover auto-scroll lands exactly
+  // at the bottom of the page, at any screen size.
+  function setScreenHeight() {
+    document.querySelectorAll('.scroll-shot').forEach(s => {
+      s.style.setProperty('--sh', Math.round(s.clientHeight) + 'px');
+    });
+  }
+  setScreenHeight();
+  window.addEventListener('resize', setScreenHeight);
+  window.addEventListener('load', setScreenHeight);
 </script>
 </body>
 </html>
