@@ -5,10 +5,53 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>The Coat — Case Study | Yuliia Dovha</title>
-<meta name="description" content="The Coat — UX/UI case study by Yuliia Dovha.">
-<link rel="stylesheet" href="style.css">
+<meta name="description" content="The Coat — a fashion e-commerce concept for Ukrainian womenswear brand The COAT by Katya Silchenko. UX/UI case study by Yuliia Dovha: research, information architecture, UX, UI and prototype.">
+<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="marmix-additions.css?v=11">
+<style>
+  /* --- the-coat only: small additions on top of the shared case-study system --- */
+  .coat-phone-shot{
+    width: 100%; height: auto; display: block;
+    border-radius: var(--r-img);
+    border: 1px solid var(--line);
+    box-shadow: 0 24px 60px -34px rgba(0,0,0,.30);
+  }
+  /* Information architecture — site map */
+  .coat-sitemap{ display: grid; gap: 16px; }
+  .sm-root{
+    justify-self: center; font-size: 13px; font-weight: 600; letter-spacing: 1px;
+    text-transform: uppercase; color: #fff; background: var(--ink);
+    padding: 9px 20px; border-radius: 100px;
+  }
+  .sm-stem{ justify-self: center; width: 1px; height: 16px; background: var(--line); }
+  .sm-cols{ display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .sm-node{
+    border: 1px solid var(--line); border-radius: var(--r-md); padding: 16px 15px; background: #fff;
+    transition: border-color .25s var(--ease), transform .25s var(--ease);
+  }
+  .sm-node:hover{ border-color: #cfcfcf; transform: var(--lift); }
+  .sm-node.is-shop{ background: #fafafa; }
+  .sm-node h4{ font-size: 14.5px; font-weight: 600; margin: 0 0 6px; letter-spacing: -0.1px; }
+  .sm-node p{ color: var(--muted); font-size: 12.5px; font-weight: 300; line-height: 1.45; margin: 0; }
+  .sm-sub{ list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 6px; }
+  .sm-sub li{
+    font-size: 11.5px; letter-spacing: .3px; color: var(--ink); font-weight: 500;
+    border: 1px solid var(--line); border-radius: var(--r-sm); padding: 6px 9px; background: #fff;
+  }
+  /* placeholder slot for the analysis / user-flow map export */
+  .coat-map-ph{
+    margin-top: 34px; border: 1.5px dashed #cfcfcf; border-radius: var(--r-lg);
+    background: repeating-linear-gradient(45deg, #fafafa, #fafafa 12px, #f4f4f4 12px, #f4f4f4 24px);
+    min-height: 240px; display: flex; align-items: center; justify-content: center; text-align: center;
+    padding: 32px;
+  }
+  .coat-map-ph span{ display: block; color: var(--muted); font-size: 14px; font-weight: 300; line-height: 1.6; max-width: 44ch; }
+  .coat-map-ph b{ color: var(--ink); font-weight: 600; }
+  @media (max-width: 820px){ .sm-cols{ grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px){ .sm-cols{ grid-template-columns: 1fr; } }
+</style>
 </head>
-<body>
+<body class="marmix">
 
 <header class="wrap nav">
   <a href="index.html" class="logo">YD</a>
@@ -22,30 +65,248 @@
 </header>
 
 <main>
-  <section class="wrap cs-hero">
-    <div class="title reveal">
-      <h1>The Coat</h1>
-      <p class="role">UX/UI Designer &bull; Case Study</p>
+
+  <!-- HERO -->
+  <section class="wrap cs-hero" id="cs-hero">
+    <div class="title">
+      <span class="hero-kicker">Fashion e-commerce &middot; The COAT, Kyiv</span>
+      <h1 class="hero-h1"><span>The Coat</span></h1>
+      <p class="role">UX/UI Designer &mdash; E-commerce &amp; collection launch</p>
+      <p class="scroll-hint">Hover the preview to scroll the full homepage &rarr;</p>
     </div>
-    <div class="cs-shot reveal">
-      <div class="thumb-ph"><span>Hero mockup</span>replace with your Figma export</div>
+    <div class="hero-browser macbook">
+      <div class="scroll-shot">
+        <img src="coat-home-full.jpg" alt="The COAT redesigned homepage — full landing page">
+      </div>
+      <img class="mb-frame" src="macbook.png" alt="" aria-hidden="true">
     </div>
   </section>
 
+  <!-- META -->
+  <div class="wrap">
+    <div class="cs-meta reveal">
+      <div><div class="label">Role</div><div class="val">UX/UI Designer<br>(Solo, end to end)</div></div>
+      <div><div class="label">Scope</div><div class="val">Research, IA,<br>UX, UI, Prototype</div></div>
+      <div><div class="label">Tools</div><div class="val">Figma</div></div>
+      <div><div class="label">Focus</div><div class="val">Collection launch<br>&amp; conversion</div></div>
+    </div>
+  </div>
+
+  <!-- SHOWCASE 1: homepage + collection page -->
+  <section class="showcase-block reveal">
+    <figure class="fullbleed">
+      <img src="coat-showcase.jpg" alt="The COAT — homepage and Spring–Summer 2023 collection page">
+    </figure>
+    <p class="cs-caption">A first glance &mdash; the homepage and the Spring&ndash;Summer 2023 collection page.</p>
+  </section>
+
+  <!-- 01 OVERVIEW -->
   <section class="cs-block reveal">
-    <h2><span class="num">01.</span>Overview</h2>
-    <p>E-commerce redesign for a Ukrainian fashion designer.</p>
-    <span class="note">Yuliia &mdash; this case study is a placeholder waiting for your real content: brief, research, screens and outcome. Send me the details (or screenshots, like we did for Marmix) and I'll build out the full write-up.</span>
+    <header class="sec-head">
+      <span class="eyebrow idx">01</span>
+      <h2 class="sec-title">Overview</h2>
+    </header>
+    <p>The COAT is a Ukrainian pr&ecirc;t-&agrave;-porter womenswear brand founded by designer Katya
+    Silchenko in 2014. It's known for a strong editorial identity &mdash; muted palette, sculptural
+    silhouettes and craft-led detail &mdash; and for collections that carry a clear cultural story.</p>
+    <p>The goal of this project was to design an online store that could <em>launch a new collection
+    like a fashion campaign</em> and still work hard as a shop. I took it end to end in Figma:
+    research, information architecture, UX and UI, across desktop and mobile &mdash; framed around the
+    Spring&ndash;Summer 2023 drop, its lookbook, and a clear path from browsing to buying.</p>
   </section>
 
+  <!-- 02 THE BRIEF -->
+  <section class="cs-block reveal">
+    <header class="sec-head">
+      <span class="eyebrow idx">02</span>
+      <h2 class="sec-title">The brief</h2>
+    </header>
+    <p>A recognised designer with a magazine-grade visual world needed a store that felt like the
+    brand &mdash; not a generic template &mdash; while quietly doing the commercial job. That pulled
+    the design in a few directions at once:</p>
+    <ul class="issue-list">
+      <li><strong>Editorial vs. shop.</strong> Present the collection like a campaign, but never bury the &ldquo;add to cart&rdquo;.</li>
+      <li><strong>A collection, not a grid.</strong> Make Spring&ndash;Summer 2023 feel like a story, with lookbook imagery leading.</li>
+      <li><strong>One clear path to buy.</strong> Move a visitor from lookbook &rarr; product &rarr; cart without friction or dead ends.</li>
+      <li><strong>A distinctive voice.</strong> Serif display type, generous whitespace and a restrained palette carried across every page.</li>
+      <li><strong>Built for two markets.</strong> Bilingual EN&nbsp;/&nbsp;UA and pricing in hryvnia (&#8372;), the way the brand actually sells.</li>
+    </ul>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section class="cs-block reveal">
+    <header class="sec-head">
+      <span class="eyebrow">Who it's for</span>
+      <h2 class="sec-title">Two ways in</h2>
+      <p class="sec-lead">Most visitors arrive as one of these two people. They come with different
+      questions, so the store had to reward both &mdash; the loyal follower who wants the new drop,
+      and the newcomer who found the brand through press.</p>
+    </header>
+    <div class="persona-grid">
+      <div class="persona">
+        <span class="persona-tag">Visitor 01</span>
+        <h3>The follower</h3>
+        <p class="persona-role">Already knows The COAT and is here for the new collection.</p>
+        <ul>
+          <li>Shops mostly from a phone, led by the imagery</li>
+          <li>Wants the lookbook and the newest pieces first</li>
+          <li>Ready to buy &mdash; needs sizing and cart to be effortless</li>
+        </ul>
+      </div>
+      <div class="persona">
+        <span class="persona-tag">Visitor 02</span>
+        <h3>The newcomer</h3>
+        <p class="persona-role">Discovered the brand through Vogue, Elle or a friend.</p>
+        <ul>
+          <li>Values craft and the story behind the collection</li>
+          <li>Compares a few options before committing</li>
+          <li>Needs clear pricing, shipping and payment answers</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 STRUCTURE & FLOW  (replaces before/after) -->
+  <section class="cs-block reveal">
+    <header class="sec-head">
+      <span class="eyebrow idx">03</span>
+      <h2 class="sec-title">Structure &amp; flow</h2>
+      <p class="sec-lead">Before any visuals, I mapped how the store should be organised and how a
+      visitor gets from a lookbook image to a completed order.</p>
+    </header>
+
+    <div class="artifact">
+      <span class="artifact-h">Information architecture &mdash; the store at a glance</span>
+      <div class="coat-sitemap">
+        <span class="sm-root">Home</span>
+        <span class="sm-stem" aria-hidden="true"></span>
+        <div class="sm-cols">
+          <div class="sm-node"><h4>About</h4><p>Brand story &amp; Katya Silchenko</p></div>
+          <div class="sm-node"><h4>Collections</h4><p>Spring&ndash;Summer 2023 lookbook</p></div>
+          <div class="sm-node is-shop">
+            <h4>Shop online</h4><p>The path to purchase</p>
+            <ul class="sm-sub">
+              <li>Catalog &amp; filters</li>
+              <li>Product &middot; Shop the look</li>
+              <li>Cart</li>
+              <li>Checkout &middot; shipping &amp; payment</li>
+            </ul>
+          </div>
+          <div class="sm-node"><h4>Stores</h4><p>Where to find the brand</p></div>
+          <div class="sm-node"><h4>Contact</h4><p>Chat, newsletter, socials</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="artifact">
+      <span class="artifact-h">Path to purchase &mdash; three clear steps</span>
+      <div class="flow">
+        <div class="flow-step">
+          <span class="fs-n">1</span>
+          <h4>Discover the collection</h4>
+          <p>Land on the campaign hero and browse the Spring&ndash;Summer 2023 lookbook.</p>
+        </div>
+        <div class="flow-sep" aria-hidden="true">&rarr;</div>
+        <div class="flow-step">
+          <span class="fs-n">2</span>
+          <h4>Shop the look</h4>
+          <p>Jump from a styled image straight to the product, size and price.</p>
+        </div>
+        <div class="flow-sep" aria-hidden="true">&rarr;</div>
+        <div class="flow-step">
+          <span class="fs-n">3</span>
+          <h4>Cart &amp; checkout</h4>
+          <p>Add to cart and complete the order with clear shipping and payment.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="artifact">
+      <span class="artifact-h">Analysis &amp; user-flow map</span>
+      <div class="coat-map-ph">
+        <span>Your analysis / user-flow map goes here. <b>The export you sent came through blank
+        (a solid black file)</b>, so this is a placeholder &mdash; re-export it and save it as
+        <b>coat-analysis.jpg</b> in the project folder to drop it in.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL DESIGNS SHOWCASE -->
+  <section class="showcase-block reveal">
+    <figure class="fullbleed">
+      <img src="coat-final-designs.jpg" alt="The COAT — the final approved screens: home, catalog, product, collection and checkout">
+    </figure>
+    <p class="cs-caption">The final approved designs &mdash; home, catalog, product page, collection and checkout.</p>
+  </section>
+
+  <!-- MOBILE / RESPONSIVE -->
+  <section class="mobile-block reveal">
+    <div class="wrap mobile-inner">
+      <div class="mobile-copy">
+        <span class="eyebrow">Responsive</span>
+        <h2 class="sec-title">Designed for the phone</h2>
+        <p>Fashion is browsed on the phone &mdash; in bed, on a break, mid-scroll. Every screen was
+        designed to hold up small: the campaign hero, the catalog, the lookbook story and the product
+        page all stay legible and easy to tap, so the follower can go from image to checkout without
+        pinching or hunting.</p>
+      </div>
+      <div class="mobile-mock">
+        <img class="coat-phone-shot" src="coat-phones.jpg" alt="The COAT store on two phones — the catalog and the Spring–Summer 2023 collection">
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 OUTCOME -->
+  <section class="cs-block reveal">
+    <header class="sec-head">
+      <span class="eyebrow idx">04</span>
+      <h2 class="sec-title">Outcome</h2>
+    </header>
+    <p>The result is a store that reads like one of the brand's campaigns and still sells. The
+    collection leads with lookbook imagery, &ldquo;shop the look&rdquo; turns styling into a shortcut
+    to the product, and the path to cart and checkout is short and obvious. The serif display type,
+    the whitespace and the muted palette carry the brand's voice from the hero all the way to the
+    payment screen &mdash; in both languages, priced the way the brand actually sells.</p>
+  </section>
+
+  <div class="wrap">
+    <div class="stats reveal">
+      <div class="stat"><div class="stat-n">5</div><div class="stat-l">core store pages designed</div></div>
+      <div class="stat"><div class="stat-n">3<span class="op">-step</span></div><div class="stat-l">path to purchase</div></div>
+      <div class="stat"><div class="stat-n">2</div><div class="stat-l">breakpoints &mdash; desktop &amp; mobile</div></div>
+      <div class="stat"><div class="stat-n">EN<span class="op">/</span>UA</div><div class="stat-l">bilingual, priced in &#8372;</div></div>
+    </div>
+    <p class="cs-caption">The project at a glance &mdash; measured by design decisions, not vanity metrics.</p>
+  </div>
+
+  <!-- SEE THE PROTOTYPE -->
+  <section class="wrap live-site reveal">
+    <h3>See the full flow</h3>
+    <p>To walk the whole store &mdash; the campaign hero, the lookbook, &ldquo;shop the look&rdquo;
+    and the checkout &mdash; view the interactive Figma prototype.</p>
+    <a class="btn" href="#" data-figma target="_blank" rel="noopener">Open the prototype &rarr;</a>
+  </section>
+
+  <!-- MORE CASE STUDIES -->
   <section class="wrap more-cases reveal">
     <p class="h">Read more of my case studies</p>
     <div class="more-grid">
-      <a href="marmix.html"><div class="mc-thumb">Marmix &mdash; case study</div><h4>Marmix</h4><p>Ready-mix concrete manufacturer &mdash; full audit, research and redesign.</p></a>
-      <a href="kalinamed.html"><div class="mc-thumb">KalinaMed &mdash; mockup</div><h4>KalinaMed</h4><p>Patient-focused personal brand for a doctor.</p></a>
+      <a class="mc" href="marmix.html">
+        <div class="mc-thumb"><span class="mc-mono">Mx</span><span class="mc-go">Read case &rarr;</span></div>
+        <h4>Marmix</h4><p>Ready-mix concrete manufacturer &mdash; full audit, research and redesign.</p>
+      </a>
+      <a class="mc" href="biezynski.html">
+        <div class="mc-thumb"><span class="mc-mono">Bi</span><span class="mc-go">Read case &rarr;</span></div>
+        <h4>Bie&#380;ynski</h4><p>A heritage family bakery reborn as a digital-first brand.</p>
+      </a>
+      <a class="mc" href="kalinamed.html">
+        <div class="mc-thumb"><span class="mc-mono">Km</span><span class="mc-go">Read case &rarr;</span></div>
+        <h4>KalinaMed</h4><p>Patient-focused personal brand for a doctor.</p>
+      </a>
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section class="wrap contact">
     <p class="hi reveal">&#128075; Get in touch at</p>
     <a class="mail reveal" href="mailto:julidovha05@gmail.com">julidovha05@gmail.com</a>
@@ -71,6 +332,17 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.08 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Measure the laptop screen window so the hover auto-scroll lands exactly
+  // at the bottom of the page, at any screen size.
+  function setScreenHeight() {
+    document.querySelectorAll('.scroll-shot').forEach(s => {
+      s.style.setProperty('--sh', Math.round(s.clientHeight) + 'px');
+    });
+  }
+  setScreenHeight();
+  window.addEventListener('resize', setScreenHeight);
+  window.addEventListener('load', setScreenHeight);
 </script>
 </body>
 </html>
