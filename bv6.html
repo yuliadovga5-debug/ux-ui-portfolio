@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>BV6 — Case Study | Yuliia Dovha</title>
+<meta name="description" content="BV6 — full UX audit and redesign for a technical-expert (rzeczoznawca) office covering vehicles, machinery and traffic accidents. UX/UI case study by Yuliia Dovha: audit, information architecture, content system and build.">
+<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="marmix-additions.css?v=11">
+<style>
+  /* --- bv6 only: small addition on top of the shared case-study system --- */
+  .bv6-shot{
+    max-width: 560px; margin: 28px auto 0;
+    aspect-ratio: 3 / 4; overflow: hidden;
+    border-radius: var(--r-img); border: 1px solid var(--line);
+    box-shadow: 0 24px 60px -34px rgba(0,0,0,.30);
+  }
+  .bv6-shot img{ width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+</style>
+</head>
+<body class="marmix">
+
+<header class="wrap nav">
+  <a href="index.html" class="logo">YD</a>
+  <button class="nav-toggle" aria-label="Menu">&#9776;</button>
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="#" class="resume-link">Resume</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="wrap cs-hero" id="cs-hero">
+    <div class="title">
+      <span class="hero-kicker">Live client project &middot; Vehicle &amp; machinery technical experts, Krak&oacute;w</span>
+      <h1 class="hero-h1"><span>BV6</span></h1>
+      <p class="role">UX/UI Designer &mdash; UX audit, information architecture &amp; rebuild</p>
+      <p class="scroll-hint">Hover the preview to scroll the full homepage &rarr;</p>
+    </div>
+    <div class="hero-browser macbook">
+      <div class="scroll-shot">
+        <img src="bv6-home-new.jpg" alt="BV6 redesigned homepage — full landing page">
+      </div>
+      <img class="mb-frame" src="macbook.png" alt="" aria-hidden="true">
+    </div>
+  </section>
+
+  <!-- META -->
+  <div class="wrap">
+    <div class="cs-meta reveal">
+      <div><div class="label">Role</div><div class="val">UX/UI Designer<br>(Solo, end to end)</div></div>
+      <div><div class="label">Scope</div><div class="val">Audit, IA,<br>Content system, Build</div></div>
+      <div><div class="label">Tools</div><div class="val">Figma, WordPress,<br>Elementor</div></div>
+      <div><div class="label">Focus</div><div class="val">Information architecture<br>&amp; content depth</div></div>
+    </div>
+  </div>
+
+  <!-- SHOWCASE 1: overview collage -->
+  <section class="showcase-block reveal">
+    <figure class="fullbleed">
+      <img src="bv6-overview-1.jpg" alt="BV6 redesign — laptop and mobile views of the rebuilt site">
+    </figure>
+    <p class="cs-caption">A quick look across the redesign &mdash; homepage, service pages and the mobile experience side by side.</p>
+  </section>
+
+  <!-- 01 OVERVIEW -->
+  <section class="cs-block reveal">
+    <header class="sec-head">
+      <span class="eyebrow idx">01</span>
+      <h2 class="sec-title">Overview</h2>
+    </header>
+    <p>BV6 is a Krak&oacute;w-based office of certified technical experts (rzeczoznawcy) covering vehicles,
+    industrial machinery and traffic-accident reconstruction. Their reports and opinions are used as
+    evidence &mdash; by private clients disputing an insurance payout, by insurers and banks, by law
+    firms, and by courts and public institutions.</p>
+    <p>The existing site badly undersold that authority. The client's brief was direct: expand the
+    offer so every service is actually findable, and rebuild the site around it &mdash; without losing
+    clarity, even though the subject matter itself (insurance law, technical inspection, legal claims)
+    is dense by nature. I took the project end to end: audit, information architecture, content
+    structure and the build in WordPress and Elementor.</p>
+  </section>
+
+  <!-- 02 PROBLEM -->
+  <section class="cs-block reveal">
+    <header class="sec-head">
+      <span class="eyebrow idx">02</span>
+      <h2 class="sec-title">The problem</h2>
+    </header>
+    <p>For a business whose entire value proposition rests on depth of expertise, the old site showed
+    almost none of it.</p>
+    <ul class="issue-list">
+      <li><strong>A five-item offer.</strong> The "Us&#322;ugi" dropdown covered vehicles only &mdash; nothing for machinery, EDR crash-data or expert-witness work. Clients had to call just to find out what BV6 actually did.</li>
+      <li><strong>A mystery "Inne" menu.</strong> A catch-all "Other" item with no preview of what was inside &mdash; a dead end for a first-time visitor trying to orient themselves.</li>
+      <li><strong>No depth for a trust-based service.</strong> A court opinion or a total-loss valuation is a serious, one-off decision. There was no process explanation, no FAQ, no visible certification.</li>
+      <li><strong>A thin, disconnected blog.</strong> A handful of generic posts, unlinked from the services they were actually about.</li>
+      <li><strong>One template for everything.</strong> Diagnostics, valuations, court opinions and EDR data read-outs are different services for different buyers, yet they all shared the same shallow page.</li>
+    </ul>
+  </section>
+
+  <!-- BEFORE & AFTER -->
+  <section class="ba-block reveal">
+    <div class="wrap">
+      <header class="sec-head">
+        <span class="eyebrow">Before &amp; after</span>
+        <h2 class="sec-title">The same pages, rethought</h2>
+        <p class="sec-lead">Three places where the gap was widest &mdash; the old site on the left, the redesign on the right.</p>
+      </header>
+
+      <div class="ba-grid">
+        <figure class="ba-pair">
+          <div class="ba-imgs">
+            <div class="ba-shot"><span class="ba-tag old">Before</span><img src="bv6-home-old.jpg" alt="BV6 old homepage — generic template and a vague headline"></div>
+            <div class="ba-shot"><span class="ba-tag new">After</span><img src="bv6-home-new.jpg" alt="BV6 redesigned homepage — trust signals before the sales pitch"></div>
+          </div>
+          <figcaption class="ba-cap"><strong>Homepage.</strong> A generic template and a vague headline replaced by trust signals &mdash; 30&#43; years of experience, court-expert status, certified machinery expertise &mdash; shown before the offer itself.</figcaption>
+        </figure>
+
+        <figure class="ba-pair">
+          <div class="ba-imgs">
+            <div class="ba-shot"><span class="ba-tag old">Before</span><img src="bv6-menu-old.jpg" alt="BV6 old menu — five-item dropdown plus a catch-all 'Inne' item"></div>
+            <div class="ba-shot"><span class="ba-tag new">After</span><img src="bv6-menu-new.jpg" alt="BV6 redesigned offer — every service named and grouped"></div>
+          </div>
+          <figcaption class="ba-cap"><strong>Menu &amp; offer.</strong> The five-item dropdown and the catch-all "Inne" item became two structured menus, naming every service so it can be scanned without a single click.</figcaption>
+        </figure>
+
+        <figure class="ba-pair">
+          <div class="ba-imgs">
+            <div class="ba-shot"><span class="ba-tag old">Before</span><img src="bv6-blog-old.jpg" alt="BV6 old blog — a handful of disconnected posts"></div>
+            <div class="ba-shot"><span class="ba-tag new">After</span><img src="bv6-blog-new.jpg" alt="BV6 redesigned blog — a long-form guide on total-loss compensation"></div>
+          </div>
+          <figcaption class="ba-cap"><strong>Blog &amp; expertise.</strong> A handful of disconnected posts became long-form guides &mdash; like how total-loss compensation is actually calculated &mdash; that double as answers to the questions clients ask before they call.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section class="cs-block reveal">
+    <header class="sec-head">
+      <span class="eyebrow">Who it's for</span>
+      <h2 class="sec-title">Two very different buyers</h2>
+      <p class="sec-lead">Every decision traced back to one of these two people. They arrive with different questions and different stakes, so the site had to serve both without slowing either down.</p>
+    </header>
+    <div class="persona-grid">
+      <div class="persona">
+        <span class="persona-tag">Buyer 01</span>
+        <h3>The individual client</h3>
+        <p class="persona-role">Disputing a payout or valuing their own car or machine.</p>
+        <ul>
+          <li>Often reaching out right after an accident or a rejected claim</li>
+          <li>Needs plain-language reassurance before technical detail</li>
+          <li>Wants to know the process and price before picking up the phone</li>
+        </ul>
+      </div>
+      <div class="persona">
+        <span class="persona-tag">Buyer 02</span>
+        <h3>The professional client</h3>
+        <p class="persona-role">Insurers, banks, law firms and public institutions.</p>
+        <ul>
+          <li>Needs a named service that matches a specific procedure, not a vague pitch</li>
+          <li>Cares about certification, court-expert status and documentation</li>
+          <li>Orders repeatedly, so a clear structure saves real time</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 DESIGN PROCESS -->
+  <section class="cs-block reveal">
+    <header class="sec-head">
+      <span class="eyebrow idx">03</span>
+      <h2 class="sec-title">Design process</h2>
+    </header>
+    <p>I ran a heuristic audit of the old site, then mapped out everything the client actually offers
+    &mdash; most of which had never made it onto the old menu at all.</p>
+    <ol class="steps">
+      <li><span class="s-k">Audit &amp; research</span> A heuristic review of the old site against what insurers, courts and machinery buyers actually need to trust an expert opinion.</li>
+      <li><span class="s-k">Information architecture</span> One flat "Us&#322;ugi" dropdown and a vague "Inne" item split into two structured menus &mdash; Maszyny i urz&#261;dzenia and Pojazdy &mdash; naming every real service instead of hiding it.</li>
+      <li><span class="s-k">Content system</span> One repeatable template for every service &mdash; scope, outcome, step-by-step process, pricing, FAQ &mdash; so a dozen-plus new pages could be built without reinventing the layout each time.</li>
+      <li><span class="s-k">UI &amp; build</span> Wireframes to hi-fi in Figma, shipped in WordPress and Elementor, alongside a blog restructured to actually connect to the services it explains.</li>
+    </ol>
+  </section>
+
+  <!-- KEY DECISIONS, VISUALISED -->
+  <section class="cs-block reveal">
+    <header class="sec-head">
+      <span class="eyebrow">Key decisions, visualised</span>
+      <h2 class="sec-title">From one vague item to a named, structured offer</h2>
+    </header>
+
+    <div class="artifact">
+      <span class="artifact-h">Information architecture &mdash; a flat dropdown split into two named menus</span>
+      <div class="ia">
+        <div class="ia-col">
+          <span class="ia-k">Before &mdash; 1 dropdown, 5 items + "Inne"</span>
+          <ul class="ia-list old">
+            <li>Wycena pojazdu</li>
+            <li>Wycena maszyn</li>
+            <li>Kosztorys naprawy</li>
+            <li>Ekspertyzy maszyn i urz&#261;dze&#324;</li>
+            <li>Pojazdy zabytkowe</li>
+            <li>Inne <em>&mdash; content unknown until clicked</em></li>
+          </ul>
+        </div>
+        <div class="ia-arrow" aria-hidden="true">&rarr;</div>
+        <div class="ia-col">
+          <span class="ia-k">After &mdash; 2 menus, 12+ named services</span>
+          <ul class="ia-list new">
+            <li>Maszyny i urz&#261;dzenia <em>&mdash; own structured menu</em></li>
+            <li>Diagnoza usterek i awarii pojazdu</li>
+            <li>Wycena szkody i kosztu naprawy</li>
+            <li>Weryfikacja kosztorysu naprawy</li>
+            <li>Odczyt danych powypadkowych EDR</li>
+            <li>Opinia rzeczoznawcy do VIN</li>
+            <li>&hellip; and 7 more, each named and one click away</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="artifact">
+      <span class="artifact-h">Finding the right expert &mdash; three clear steps</span>
+      <div class="flow">
+        <div class="flow-step">
+          <span class="fs-n">1</span>
+          <h4>Find the service by name</h4>
+          <p>Scan a structured menu instead of guessing what "Inne" might contain.</p>
+        </div>
+        <div class="flow-sep" aria-hidden="true">&rarr;</div>
+        <div class="flow-step">
+          <span class="fs-n">2</span>
+          <h4>Read scope, process &amp; price</h4>
+          <p>Every service page answers what's covered, how it runs and what it costs.</p>
+        </div>
+        <div class="flow-sep" aria-hidden="true">&rarr;</div>
+        <div class="flow-step">
+          <span class="fs-n">3</span>
+          <h4>Call or send the details</h4>
+          <p>One clear call-to-action, backed by a contact form and map.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT-HEAVY SERVICE TEMPLATE -->
+  <section class="cs-block reveal">
+    <header class="sec-head">
+      <span class="eyebrow idx">04</span>
+      <h2 class="sec-title">Making dense content readable</h2>
+    </header>
+    <p>The hardest part of this brief wasn't adding pages &mdash; it was fitting genuinely necessary,
+    technical and legal information (insurance thresholds, EDR data parameters, court-opinion
+    requirements) into something a first-time visitor could actually scan. The EDR "crash data"
+    read-out service &mdash; explaining what a car's event data recorder captures and why it matters
+    after a collision &mdash; became the template every other service page reuses: a plain-language
+    intro, a scope/outcome split, a short benefits row, then a numbered breakdown of when and how the
+    service applies, before pricing and an FAQ.</p>
+    <div class="bv6-shot">
+      <img src="bv6-service-template.jpg" alt="BV6 EDR crash-data service page — the reusable content-heavy page template">
+    </div>
+    <p class="cs-caption">The reusable service-page template, shown here for the EDR crash-data read-out &mdash; the same structure now carries every service on the site.</p>
+  </section>
+
+  <!-- SHOWCASE 2: second overview -->
+  <section class="showcase-block reveal">
+    <figure class="fullbleed">
+      <img src="bv6-overview-2.jpg" alt="BV6 redesign — a wider view of service pages and the new blog">
+    </figure>
+    <p class="cs-caption">A wider view of the rebuilt site &mdash; service pages, homepage sections and one of the new long-form guides.</p>
+  </section>
+
+  <!-- MOBILE / RESPONSIVE -->
+  <section class="mobile-block reveal">
+    <div class="wrap mobile-inner">
+      <div class="mobile-copy">
+        <span class="eyebrow">Responsive</span>
+        <h2 class="sec-title">Designed for the phone that's already in hand</h2>
+        <p>Many clients land on BV6 straight after a collision, or while comparing valuations on the
+        go &mdash; not sitting at a desk. The menu, the click-to-call and every service page had to
+        stay legible and tappable, so the dense technical content doesn't turn into a wall of text on
+        a small screen.</p>
+      </div>
+      <div class="mobile-mock">
+        <img class="mobile-phones" src="bv6-phones.png" alt="BV6 site on two phones — the homepage and the map/contact section">
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 SOLUTION & RESULTS -->
+  <section class="cs-block reveal">
+    <header class="sec-head">
+      <span class="eyebrow idx">05</span>
+      <h2 class="sec-title">Solution &amp; results</h2>
+    </header>
+    <p>The full range &mdash; vehicles, machinery and traffic incidents &mdash; now sits under two
+    clear menus instead of one vague dropdown. Every service has its own page explaining scope,
+    outcome, process and price, the blog is tied back to the services it explains, and the homepage
+    leads with credibility before the pitch. Because it's built in WordPress and Elementor, the team
+    can keep adding services and guides themselves.</p>
+  </section>
+
+  <div class="wrap">
+    <div class="stats reveal">
+      <div class="stat"><div class="stat-n">5<span class="op">&rarr;</span>12+</div><div class="stat-l">vehicle services now named on the menu</div></div>
+      <div class="stat"><div class="stat-n">1<span class="op">&rarr;</span>2</div><div class="stat-l">flat dropdown split into structured menus</div></div>
+      <div class="stat"><div class="stat-n">4</div><div class="stat-l">trust reasons, each with its own explanation</div></div>
+      <div class="stat"><div class="stat-n">6</div><div class="stat-l">FAQ answers surfaced before a client has to ask</div></div>
+    </div>
+    <p class="cs-caption">The redesign at a glance &mdash; measured by design decisions, not vanity metrics.</p>
+  </div>
+
+  <!-- VIEW THE LIVE SITE -->
+  <section class="wrap live-site reveal">
+    <h3>View the live site</h3>
+    <p>To see the redesign in action &mdash; the structured offer, the service-page template and the
+    rebuilt blog &mdash; visit the live BV6 website.</p>
+    <a class="btn" href="https://bv6.pl" target="_blank" rel="noopener">Visit bv6.pl &rarr;</a>
+  </section>
+
+  <!-- MORE CASE STUDIES -->
+  <section class="wrap more-cases reveal">
+    <p class="h">Read more of my case studies</p>
+    <div class="more-grid">
+      <a class="mc" href="marmix.html">
+        <div class="mc-thumb"><span class="mc-mono">Mx</span><span class="mc-go">Read case &rarr;</span></div>
+        <h4>Marmix</h4><p>Ready-mix concrete manufacturer &mdash; full audit, research and redesign.</p>
+      </a>
+      <a class="mc" href="biezynski.html">
+        <div class="mc-thumb"><span class="mc-mono">Bi</span><span class="mc-go">Read case &rarr;</span></div>
+        <h4>Bie&#380;ynski</h4><p>A heritage family bakery reborn as a digital-first brand.</p>
+      </a>
+      <a class="mc" href="kalinamed.html">
+        <div class="mc-thumb"><span class="mc-mono">Km</span><span class="mc-go">Read case &rarr;</span></div>
+        <h4>KalinaMed</h4><p>Patient-focused personal brand for a doctor.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="wrap contact">
+    <p class="hi reveal">&#128075; Get in touch at</p>
+    <a class="mail reveal" href="mailto:julidovha05@gmail.com">julidovha05@gmail.com</a>
+    <div class="reveal"><a class="btn" href="mailto:julidovha05@gmail.com">Contact Me</a></div>
+  </section>
+</main>
+
+<footer class="wrap footer">
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="#" class="resume-link">Resume</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+  <div class="social"><a href="#" data-linkedin target="_blank" rel="noopener">LinkedIn</a></div>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  toggle && toggle.addEventListener('click', () => links.classList.toggle('open'));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Measure the laptop screen window so the hover auto-scroll lands exactly
+  // at the bottom of the page, at any screen size.
+  function setScreenHeight() {
+    document.querySelectorAll('.scroll-shot').forEach(s => {
+      s.style.setProperty('--sh', Math.round(s.clientHeight) + 'px');
+    });
+  }
+  setScreenHeight();
+  window.addEventListener('resize', setScreenHeight);
+  window.addEventListener('load', setScreenHeight);
+</script>
+</body>
+</html>
