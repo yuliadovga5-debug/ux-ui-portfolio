@@ -368,6 +368,17 @@ html, body { overflow-x: hidden; }
 }
 .mc:hover .mc-thumb{ transform: var(--lift); box-shadow: 0 26px 52px -30px rgba(0,0,0,.30); border-color: #cfcfcf; }
 .mc:hover .mc-go{ opacity: 1; transform: none; }
+.mc-thumb.has-img{ background: #101010; }
+.mc-thumb .mc-img{
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: top center; z-index: 0;
+}
+.mc-thumb.has-img::after{
+  content: ""; position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 58%, rgba(0,0,0,.58) 100%);
+}
+.mc-thumb .mc-mono, .mc-thumb .mc-go{ position: relative; z-index: 2; }
+.mc-thumb.has-img .mc-go{ color: #fff; }
 .more-grid h4{ text-align: center; font-weight: 600; font-size: 18px; margin: 18px 0 8px; }
 .more-grid p{ text-align: center; color: var(--muted); font-size: 14px; font-weight: 300; max-width: 32ch; margin: 0 auto; }
 

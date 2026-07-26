@@ -17,6 +17,28 @@
     box-shadow: 0 24px 60px -34px rgba(0,0,0,.30);
   }
   .bv6-shot img{ width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+
+  /* --- before/after lightbox --- */
+  .ba-pair{ cursor: zoom-in; }
+  .lightbox{
+    position: fixed; inset: 0; background: rgba(10,10,10,.92);
+    display: none; align-items: center; justify-content: center;
+    flex-direction: column; gap: 18px; z-index: 999; padding: 56px 20px 40px;
+  }
+  .lightbox.open{ display: flex; }
+  .lb-close{
+    position: absolute; top: 18px; right: 22px; width: 42px; height: 42px;
+    border-radius: 50%; border: 1px solid rgba(255,255,255,.3); background: rgba(255,255,255,.08);
+    color: #fff; font-size: 22px; line-height: 1; cursor: pointer;
+  }
+  .lb-close:hover{ background: rgba(255,255,255,.18); }
+  .lb-inner{ display: flex; gap: 22px; max-width: 1240px; width: 100%; }
+  .lb-fig{ position: relative; flex: 1; min-width: 0; }
+  .lb-fig img{ width: 100%; height: auto; max-height: 76vh; object-fit: contain; border-radius: var(--r-img); display: block; background: #111; }
+  .lb-cap{ color: #d8d8d8; font-size: 14px; text-align: center; max-width: 760px; font-weight: 300; line-height: 1.6; }
+  .lb-cap strong{ color: #fff; }
+  .lb-hint{ color: #8a8a8a; font-size: 12px; text-align: center; }
+  @media (max-width: 720px){ .lb-inner{ flex-direction: column; overflow-y: auto; max-height: 78vh; } .lb-fig img{ max-height: none; } }
 </style>
 </head>
 <body class="marmix">
@@ -108,7 +130,7 @@
       <header class="sec-head">
         <span class="eyebrow">Before &amp; after</span>
         <h2 class="sec-title">The same pages, rethought</h2>
-        <p class="sec-lead">Three places where the gap was widest &mdash; the old site on the left, the redesign on the right.</p>
+        <p class="sec-lead">Four places where the gap was widest &mdash; the old site on the left, the redesign on the right. Click any pair to compare them full-size.</p>
       </header>
 
       <div class="ba-grid">
@@ -134,6 +156,14 @@
             <div class="ba-shot"><span class="ba-tag new">After</span><img src="bv6-blog-new.jpg" alt="BV6 redesigned blog — a long-form guide on total-loss compensation"></div>
           </div>
           <figcaption class="ba-cap"><strong>Blog &amp; expertise.</strong> A handful of disconnected posts became long-form guides &mdash; like how total-loss compensation is actually calculated &mdash; that double as answers to the questions clients ask before they call.</figcaption>
+        </figure>
+
+        <figure class="ba-pair">
+          <div class="ba-imgs">
+            <div class="ba-shot"><span class="ba-tag old">Before</span><img src="bv6-kontakt-old.jpg" alt="BV6 old contact page — a plain form and an empty map placeholder"></div>
+            <div class="ba-shot"><span class="ba-tag new">After</span><img src="bv6-kontakt-new.jpg" alt="BV6 redesigned contact page — a live map, a 5.0 rating and named phone lines"></div>
+          </div>
+          <figcaption class="ba-cap"><strong>Contact.</strong> The new version is the clear improvement, and it's easy to see why: a live, embedded map with a visible 5.0-star, 116-review rating replaces an empty grey placeholder, a second office line and clearer icons for social and email sit right next to it, and the same page now carries the full footer sitemap &mdash; so trust and navigation are both doing work here, not just the form.</figcaption>
         </figure>
       </div>
     </div>
@@ -286,7 +316,7 @@
         a small screen.</p>
       </div>
       <div class="mobile-mock">
-        <img class="mobile-phones" src="bv6-phones.png" alt="BV6 site on two phones — the homepage and the map/contact section">
+        <img class="mobile-phones" src="bv6-phones.png" alt="BV6 site floating on two phones, background removed — the homepage and the map/contact section">
       </div>
     </div>
   </section>
@@ -327,7 +357,7 @@
     <p class="h">Read more of my case studies</p>
     <div class="more-grid">
       <a class="mc" href="marmix.html">
-        <div class="mc-thumb"><span class="mc-mono">Mx</span><span class="mc-go">Read case &rarr;</span></div>
+        <div class="mc-thumb has-img"><img class="mc-img" src="marmix-hero.jpg" alt="Marmix homepage shown on a MacBook and phone"><span class="mc-go">Read case &rarr;</span></div>
         <h4>Marmix</h4><p>Ready-mix concrete manufacturer &mdash; full audit, research and redesign.</p>
       </a>
       <a class="mc" href="biezynski.html">
@@ -348,6 +378,17 @@
     <div class="reveal"><a class="btn" href="mailto:julidovha05@gmail.com">Contact Me</a></div>
   </section>
 </main>
+
+<!-- BEFORE/AFTER LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+  <div class="lb-inner">
+    <figure class="lb-fig"><span class="ba-tag old">Before</span><img id="lbImgOld" alt=""></figure>
+    <figure class="lb-fig"><span class="ba-tag new">After</span><img id="lbImgNew" alt=""></figure>
+  </div>
+  <p class="lb-cap" id="lbCap"></p>
+  <p class="lb-hint">Click outside the images, press Esc, or use the &times; button to close.</p>
+</div>
 
 <footer class="wrap footer">
   <div class="footer-links">
@@ -378,6 +419,34 @@
   setScreenHeight();
   window.addEventListener('resize', setScreenHeight);
   window.addEventListener('load', setScreenHeight);
+
+  // Before/after lightbox — click a pair to compare both images full-size
+  const lightbox = document.getElementById('lightbox');
+  const lbImgOld = document.getElementById('lbImgOld');
+  const lbImgNew = document.getElementById('lbImgNew');
+  const lbCap = document.getElementById('lbCap');
+  const lbClose = document.getElementById('lbClose');
+
+  function openLightbox(pair) {
+    const imgs = pair.querySelectorAll('.ba-shot img');
+    const cap = pair.querySelector('.ba-cap');
+    if (imgs.length < 2) return;
+    lbImgOld.src = imgs[0].src; lbImgOld.alt = imgs[0].alt;
+    lbImgNew.src = imgs[1].src; lbImgNew.alt = imgs[1].alt;
+    lbCap.innerHTML = cap ? cap.innerHTML : '';
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.ba-pair').forEach(pair => {
+    pair.addEventListener('click', () => openLightbox(pair));
+  });
+  lbClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
 </script>
 </body>
 </html>
