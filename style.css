@@ -461,3 +461,70 @@ html, body { overflow-x: hidden; }
 @media (prefers-reduced-motion: reduce) {
   .scroll-shot:hover img { transform: none; transition: none; }
 }
+
+/* ============================================================
+   HOME — strzalka "See my projects" + karta "Everything else"
+   ============================================================ */
+
+/* ---------- Hero scroll cue ---------- */
+.scroll-cue {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: clamp(30px, 4vw, 46px);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--ink);
+}
+.scroll-cue .cue-dot {
+  width: 46px; height: 46px;
+  flex: 0 0 auto;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  display: grid; place-items: center;
+  transition: background .25s ease, border-color .25s ease, color .25s ease;
+}
+.scroll-cue .cue-dot svg {
+  width: 15px; height: 15px;
+  stroke: currentColor; fill: none; stroke-width: 1.5;
+  animation: cue-nudge 2.6s cubic-bezier(.4, 0, .2, 1) infinite;
+}
+.scroll-cue:hover .cue-dot {
+  background: var(--btn);
+  border-color: var(--btn);
+  color: var(--btn-ink);
+}
+.scroll-cue:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 8px;
+  border-radius: 40px;
+}
+@keyframes cue-nudge {
+  0%, 55%, 100% { transform: translateY(0); }
+  28%           { transform: translateY(5px); }
+}
+
+/* zapas przy smooth-scrollu do sekcji projektow */
+#projects { scroll-margin-top: 28px; }
+
+/* ---------- Karta "Everything else" (Figma) ---------- */
+.project-thumb.is-figma { background: #cacaca; }
+.thumb-tag {
+  position: absolute;
+  top: 16px; left: 16px;
+  z-index: 2;
+  background: rgba(255, 255, 255, .94);
+  border-radius: 100px;
+  padding: 6px 14px;
+  font-size: 11px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue .cue-dot svg { animation: none; }
+}
