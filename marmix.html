@@ -7,7 +7,7 @@
 <title>Marmix — Case Study | Yuliia Dovha</title>
 <meta name="description" content="Marmix — redesign of a ready-mix concrete manufacturer's website. UX/UI case study by Yuliia Dovha: audit, research, information architecture, UI design and build.">
 <link rel="stylesheet" href="style.css?v=3">
-<link rel="stylesheet" href="marmix-additions.css?v=11">
+<link rel="stylesheet" href="marmix-additions.css?v=12">
 </head>
 <body class="marmix">
 
@@ -97,7 +97,7 @@
       <header class="sec-head">
         <span class="eyebrow">Before &amp; after</span>
         <h2 class="sec-title">The same pages, rethought</h2>
-        <p class="sec-lead">Four key pages, shown as the buyer first sees them &mdash; the 2015 site on the left, the redesign on the right.</p>
+        <p class="sec-lead">Four key pages, shown as the buyer first sees them &mdash; the 2015 site on the left, the redesign on the right. Click any pair to compare them full-size.</p>
       </header>
 
       <div class="ba-grid">
@@ -310,15 +310,15 @@
     <p class="h">Read more of my case studies</p>
     <div class="more-grid">
       <a class="mc" href="bv6.html">
-        <div class="mc-thumb has-img"><img class="mc-img" src="bv6-hero.jpg" alt="BV6 homepage shown on a laptop and phones"><span class="mc-go">Read case &rarr;</span></div>
+        <div class="mc-thumb has-img"><img class="mc-img" src="bv6-hero.jpg" alt="BV6 homepage shown on a laptop and phones"></div>
         <h4>BV6</h4><p>Technical-expert office &mdash; UX audit, IA and a content system for dense, trust-critical information.</p>
       </a>
       <a class="mc" href="biezynski.html">
-        <div class="mc-thumb"><span class="mc-mono">Bi</span><span class="mc-go">Read case &rarr;</span></div>
+        <div class="mc-thumb"><span class="mc-mono">Bi</span></div>
         <h4>Bie&#380;ynski</h4><p>A heritage family bakery reborn as a digital-first brand.</p>
       </a>
       <a class="mc" href="kalinamed.html">
-        <div class="mc-thumb"><span class="mc-mono">Km</span><span class="mc-go">Read case &rarr;</span></div>
+        <div class="mc-thumb"><span class="mc-mono">Km</span></div>
         <h4>KalinaMed</h4><p>Patient-focused personal brand for a doctor.</p>
       </a>
     </div>
@@ -331,6 +331,17 @@
     <div class="reveal"><a class="btn" href="mailto:julidovha05@gmail.com">Contact Me</a></div>
   </section>
 </main>
+
+<!-- BEFORE/AFTER LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" aria-label="Close">&times;</button>
+  <div class="lb-inner">
+    <figure class="lb-fig"><span class="ba-tag old">Before</span><img id="lbImgOld" alt=""></figure>
+    <figure class="lb-fig"><span class="ba-tag new">After</span><img id="lbImgNew" alt=""></figure>
+  </div>
+  <p class="lb-cap" id="lbCap"></p>
+  <p class="lb-hint">Click outside the images, press Esc, or use the &times; button to close.</p>
+</div>
 
 <footer class="wrap footer">
   <div class="footer-links">
@@ -361,6 +372,34 @@
   setScreenHeight();
   window.addEventListener('resize', setScreenHeight);
   window.addEventListener('load', setScreenHeight);
+
+  // Before/after lightbox — click a pair to compare both images full-size
+  const lightbox = document.getElementById('lightbox');
+  const lbImgOld = document.getElementById('lbImgOld');
+  const lbImgNew = document.getElementById('lbImgNew');
+  const lbCap = document.getElementById('lbCap');
+  const lbClose = document.getElementById('lbClose');
+
+  function openLightbox(pair) {
+    const imgs = pair.querySelectorAll('.ba-shot img');
+    const cap = pair.querySelector('.ba-cap');
+    if (imgs.length < 2) return;
+    lbImgOld.src = imgs[0].src; lbImgOld.alt = imgs[0].alt;
+    lbImgNew.src = imgs[1].src; lbImgNew.alt = imgs[1].alt;
+    lbCap.innerHTML = cap ? cap.innerHTML : '';
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.ba-pair').forEach(pair => {
+    pair.addEventListener('click', () => openLightbox(pair));
+  });
+  lbClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
 </script>
 </body>
 </html>

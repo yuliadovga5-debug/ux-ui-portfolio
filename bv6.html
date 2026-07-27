@@ -7,39 +7,7 @@
 <title>BV6 — Case Study | Yuliia Dovha</title>
 <meta name="description" content="BV6 — full UX audit and redesign for a technical-expert (rzeczoznawca) office covering vehicles, machinery and traffic accidents. UX/UI case study by Yuliia Dovha: audit, information architecture, content system and build.">
 <link rel="stylesheet" href="style.css?v=3">
-<link rel="stylesheet" href="marmix-additions.css?v=11">
-<style>
-  /* --- bv6 only: small addition on top of the shared case-study system --- */
-  .bv6-shot{
-    max-width: 560px; margin: 28px auto 0;
-    aspect-ratio: 3 / 4; overflow: hidden;
-    border-radius: var(--r-img); border: 1px solid var(--line);
-    box-shadow: 0 24px 60px -34px rgba(0,0,0,.30);
-  }
-  .bv6-shot img{ width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
-
-  /* --- before/after lightbox --- */
-  .ba-pair{ cursor: zoom-in; }
-  .lightbox{
-    position: fixed; inset: 0; background: rgba(10,10,10,.92);
-    display: none; align-items: center; justify-content: center;
-    flex-direction: column; gap: 18px; z-index: 999; padding: 56px 20px 40px;
-  }
-  .lightbox.open{ display: flex; }
-  .lb-close{
-    position: absolute; top: 18px; right: 22px; width: 42px; height: 42px;
-    border-radius: 50%; border: 1px solid rgba(255,255,255,.3); background: rgba(255,255,255,.08);
-    color: #fff; font-size: 22px; line-height: 1; cursor: pointer;
-  }
-  .lb-close:hover{ background: rgba(255,255,255,.18); }
-  .lb-inner{ display: flex; gap: 22px; max-width: 1240px; width: 100%; }
-  .lb-fig{ position: relative; flex: 1; min-width: 0; }
-  .lb-fig img{ width: 100%; height: auto; max-height: 76vh; object-fit: contain; border-radius: var(--r-img); display: block; background: #111; }
-  .lb-cap{ color: #d8d8d8; font-size: 14px; text-align: center; max-width: 760px; font-weight: 300; line-height: 1.6; }
-  .lb-cap strong{ color: #fff; }
-  .lb-hint{ color: #8a8a8a; font-size: 12px; text-align: center; }
-  @media (max-width: 720px){ .lb-inner{ flex-direction: column; overflow-y: auto; max-height: 78vh; } .lb-fig img{ max-height: none; } }
-</style>
+<link rel="stylesheet" href="marmix-additions.css?v=12">
 </head>
 <body class="marmix">
 
@@ -82,7 +50,7 @@
     </div>
   </div>
 
-  <!-- SHOWCASE 1: overview collage -->
+  <!-- SHOWCASE 1: two windows -->
   <section class="showcase-block reveal">
     <figure class="fullbleed">
       <img src="bv6-overview-2.jpg" alt="BV6 redesign — laptop and mobile views of the rebuilt site">
@@ -216,6 +184,14 @@
     </ol>
   </section>
 
+  <!-- SHOWCASE 2: six views -->
+  <section class="showcase-block reveal">
+    <figure class="fullbleed">
+      <img src="bv6-overview-1.jpg" alt="Overview of the redesigned BV6 site — six key screens in one view">
+    </figure>
+    <p class="cs-caption">The final approved designs &mdash; homepage, service pages, the rebuilt blog and contact, in one view.</p>
+  </section>
+
   <!-- KEY DECISIONS, VISUALISED -->
   <section class="cs-block reveal">
     <header class="sec-head">
@@ -277,14 +253,6 @@
     </div>
   </section>
 
-  <!-- SHOWCASE 2: second overview -->
-  <section class="showcase-block reveal">
-    <figure class="fullbleed">
-      <img src="bv6-overview-1.jpg" alt="BV6 redesign — a wider view of service pages and the new blog">
-    </figure>
-    <p class="cs-caption">A quick look across the redesign &mdash; homepage, service pages and the mobile experience side by side.</p>
-  </section>
-
   <!-- MOBILE / RESPONSIVE -->
   <section class="mobile-block reveal">
     <div class="wrap mobile-inner">
@@ -305,7 +273,7 @@
   <!-- 05 SOLUTION & RESULTS -->
   <section class="cs-block reveal">
     <header class="sec-head">
-      <span class="eyebrow idx">05</span>
+      <span class="eyebrow idx">04</span>
       <h2 class="sec-title">Solution &amp; results</h2>
     </header>
     <p>The full range &mdash; vehicles, machinery and traffic incidents &mdash; now sits under two
@@ -338,15 +306,15 @@
     <p class="h">Read more of my case studies</p>
     <div class="more-grid">
       <a class="mc" href="marmix.html">
-        <div class="mc-thumb has-img"><img class="mc-img" src="marmix-hero.jpg" alt="Marmix homepage shown on a MacBook and phone"><span class="mc-go">Read case &rarr;</span></div>
+        <div class="mc-thumb has-img"><img class="mc-img" src="marmix-hero.jpg" alt="Marmix homepage shown on a MacBook and phone"></div>
         <h4>Marmix</h4><p>Ready-mix concrete manufacturer &mdash; full audit, research and redesign.</p>
       </a>
       <a class="mc" href="biezynski.html">
-        <div class="mc-thumb"><span class="mc-mono">Bi</span><span class="mc-go">Read case &rarr;</span></div>
+        <div class="mc-thumb"><span class="mc-mono">Bi</span></div>
         <h4>Bie&#380;ynski</h4><p>A heritage family bakery reborn as a digital-first brand.</p>
       </a>
       <a class="mc" href="kalinamed.html">
-        <div class="mc-thumb"><span class="mc-mono">Km</span><span class="mc-go">Read case &rarr;</span></div>
+        <div class="mc-thumb"><span class="mc-mono">Km</span></div>
         <h4>KalinaMed</h4><p>Patient-focused personal brand for a doctor.</p>
       </a>
     </div>

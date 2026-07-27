@@ -1,5 +1,5 @@
 /* ============================================================
-   MARMIX — CASE STUDY DESIGN SYSTEM  (v11, authoritative)
+   MARMIX — CASE STUDY DESIGN SYSTEM  (v12, authoritative)
    Ładowany PO style.css, więc te reguły są nadrzędne.
    To jest "źródło prawdy" dla podstrony projektu — skopiuj
    ten sam system na the-coat / biezynski / kalinamed, żeby
@@ -241,6 +241,31 @@ html, body { overflow-x: hidden; }
 .ba-cap{ margin-top: 13px; font-size: 14px; color: var(--muted); font-weight: 300; line-height: 1.55; }
 .ba-cap strong{ color: var(--ink); font-weight: 600; }
 
+/* --- Before / After — powiększenie (lightbox), wspólne dla wszystkich case studies --- */
+.ba-pair{ cursor: zoom-in; }
+.lightbox{
+  position: fixed; inset: 0; background: rgba(10,10,10,.92);
+  display: none; align-items: center; justify-content: center;
+  flex-direction: column; gap: 18px; z-index: 999; padding: 56px 20px 40px;
+}
+.lightbox.open{ display: flex; }
+.lb-close{
+  position: absolute; top: 18px; right: 22px; width: 42px; height: 42px;
+  border-radius: 50%; border: 1px solid rgba(255,255,255,.3); background: rgba(255,255,255,.08);
+  color: #fff; font-size: 22px; line-height: 1; cursor: pointer;
+}
+.lb-close:hover{ background: rgba(255,255,255,.18); }
+.lb-inner{ display: flex; gap: 22px; max-width: 1240px; width: 100%; }
+.lb-fig{ position: relative; flex: 1; min-width: 0; }
+.lb-fig img{ width: 100%; height: auto; max-height: 76vh; object-fit: contain; border-radius: var(--r-img); display: block; background: #111; }
+.lb-cap{ color: #d8d8d8; font-size: 14px; text-align: center; max-width: 760px; font-weight: 300; line-height: 1.6; }
+.lb-cap strong{ color: #fff; }
+.lb-hint{ color: #8a8a8a; font-size: 12px; text-align: center; }
+@media (max-width: 720px){
+  .lb-inner{ flex-direction: column; overflow-y: auto; max-height: 78vh; }
+  .lb-fig img{ max-height: none; }
+}
+
 /* ============================================================
    7. Persony (jeden język kart + hover)
    ============================================================ */
@@ -361,24 +386,13 @@ html, body { overflow-x: hidden; }
   font-size: clamp(46px, 6vw, 68px); font-weight: 700; letter-spacing: -1px;
   color: #fff; mix-blend-mode: overlay; opacity: .9; user-select: none;
 }
-.mc-go{
-  position: absolute; left: 18px; bottom: 16px;
-  font-size: 13px; font-weight: 500; color: var(--ink);
-  opacity: 0; transform: translateY(6px); transition: opacity .3s var(--ease), transform .3s var(--ease);
-}
 .mc:hover .mc-thumb{ transform: var(--lift); box-shadow: 0 26px 52px -30px rgba(0,0,0,.30); border-color: #cfcfcf; }
-.mc:hover .mc-go{ opacity: 1; transform: none; }
-.mc-thumb.has-img{ background: #101010; }
+.mc-thumb.has-img{ background: #f2f2f2; }
 .mc-thumb .mc-img{
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: cover; object-position: top center; z-index: 0;
 }
-.mc-thumb.has-img::after{
-  content: ""; position: absolute; inset: 0; z-index: 1;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 58%, rgba(0,0,0,.58) 100%);
-}
-.mc-thumb .mc-mono, .mc-thumb .mc-go{ position: relative; z-index: 2; }
-.mc-thumb.has-img .mc-go{ color: #fff; }
+.mc-thumb .mc-mono{ position: relative; z-index: 2; }
 .more-grid h4{ text-align: center; font-weight: 600; font-size: 18px; margin: 18px 0 8px; }
 .more-grid p{ text-align: center; color: var(--muted); font-size: 14px; font-weight: 300; max-width: 32ch; margin: 0 auto; }
 
