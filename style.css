@@ -510,19 +510,19 @@ html, body { overflow-x: hidden; }
 #projects { scroll-margin-top: 28px; }
 
 /* ---------- Karta "Everything else" (Figma) ---------- */
-.project-thumb.is-figma { background: #cacaca; }
+.project-thumb.is-figma { background: #eaeaea; }
 .thumb-tag {
   position: absolute;
   top: 16px; left: 16px;
   z-index: 2;
-  background: rgba(255, 255, 255, .94);
+  background: rgba(18, 18, 18, .88);
   border-radius: 100px;
   padding: 6px 14px;
   font-size: 11px;
   letter-spacing: 1.6px;
   text-transform: uppercase;
   font-weight: 600;
-  color: var(--ink);
+  color: #fff;
 }
 
 @media (prefers-reduced-motion: reduce) {
