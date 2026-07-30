@@ -8,11 +8,7 @@
    ============================================================ */
 
 :root{
-  /* v13: portfolio jest monochromatyczne + JEDEN chlodny, jasny akcent (patrz style.css) */
-  --accent:       #0B6BCB;
-  --accent-hover: #09538F;
-  --accent-soft:  #EEF5FD;
-  --accent-line:  #CBE0F5;
+  --accent: #141414;          /* portfolio jest monochromatyczne */
   /* jeden wspólny skalowany promień zaokrągleń */
   --r-lg: 16px;   /* duże pojemniki */
   --r-md: 14px;   /* karty */
@@ -436,47 +432,4 @@ html, body { overflow-x: hidden; }
   .cs-meta > div:hover, .persona:hover, .flow-step:hover, .mc:hover .mc-thumb{ transform: none; }
   .hero-kicker, .hero-h1 > span, .cs-hero .title .role,
   .cs-hero .scroll-hint, .hero-browser.macbook{ opacity: 1 !important; transform: none !important; animation: none !important; }
-}
-
-/* ============================================================
-   14. HERO CTA + akcent na podstronach case study (v13)
-   ============================================================ */
-
-/* --- Para przyciskow w hero: "zobacz projekt" + "przeczytaj case" --- */
-.hero-actions{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 12px;
-  margin-top: 28px;
-  opacity: 0;
-  animation: hUp .7s var(--ease) .62s forwards;
-}
-.hero-actions .btn{ margin-top: 0; }
-
-/* pigulka "hover the preview" schodzi o stopien nizej w hierarchii,
-   bo teraz CTA jest glownym elementem pod nagłowkiem */
-.cs-hero .scroll-hint{
-  margin-top: 20px;
-  font-size: 12.5px;
-  font-weight: 400;
-  color: var(--muted);
-  animation-delay: .8s;
-}
-.cs-hero .scroll-hint::before{ background: var(--accent); }
-
-/* --- Akcent w narracji case study --- */
-.eyebrow.idx{ color: var(--accent); }
-.band-label::before{ background: var(--accent); }
-.steps li::before{ color: var(--accent); }
-.flow-step .fs-n{ border-color: var(--accent); color: var(--accent); }
-.stat-n{ color: var(--accent); }
-.live-site .btn{ margin-top: 0; }
-
-@media (max-width: 480px){
-  .hero-actions{ gap: 10px; }
-  .hero-actions .btn{ width: 100%; justify-content: center; }
-}
-@media (prefers-reduced-motion: reduce){
-  .hero-actions{ opacity: 1 !important; animation: none !important; }
 }
